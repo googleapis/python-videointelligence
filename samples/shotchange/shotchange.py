@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument('path', help='GCS file path for label detection.')
+    parser.add_argument('path', help='GCS path for shot change detection.')
     args = parser.parse_args()
 
     analyze_shots(args.path)
