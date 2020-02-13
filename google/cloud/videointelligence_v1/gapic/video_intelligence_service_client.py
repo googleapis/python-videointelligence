@@ -191,9 +191,9 @@ class VideoIntelligenceServiceClient(object):
     # Service calls
     def annotate_video(
         self,
-        features,
         input_uri=None,
         input_content=None,
+        features=None,
         video_context=None,
         output_uri=None,
         location_id=None,
@@ -239,9 +239,9 @@ class VideoIntelligenceServiceClient(object):
                 videos. Supported wildcards: '\*' to match 0 or more characters; '?' to
                 match 1 character. If unset, the input video should be embedded in the
                 request as ``input_content``. If set, ``input_content`` should be unset.
-            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
             input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
                 via ``input_uri``. If set, ``input_uri`` should be unset.
+            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
             video_context (Union[dict, ~google.cloud.videointelligence_v1.types.VideoContext]): Additional video context and/or feature-specific parameters.
 
                 If a dict is provided, it must be of the same form as the protobuf
