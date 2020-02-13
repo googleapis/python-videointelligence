@@ -217,7 +217,7 @@ class VideoIntelligenceServiceClient(object):
             >>> features = [features_element]
             >>> input_uri = 'gs://cloud-samples-data/video/cat.mp4'
             >>>
-            >>> response = client.annotate_video(features, input_uri=input_uri)
+            >>> response = client.annotate_video(input_uri=input_uri, features=features)
             >>>
             >>> def callback(operation_future):
             ...     # Handle result.
@@ -229,7 +229,6 @@ class VideoIntelligenceServiceClient(object):
             >>> metadata = response.metadata()
 
         Args:
-            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
             input_uri (str): Input video location. Currently, only `Google Cloud
                 Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
                 must be specified in the following format: ``gs://bucket-id/object-id``
@@ -240,6 +239,7 @@ class VideoIntelligenceServiceClient(object):
                 videos. Supported wildcards: '\*' to match 0 or more characters; '?' to
                 match 1 character. If unset, the input video should be embedded in the
                 request as ``input_content``. If set, ``input_content`` should be unset.
+            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
             input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
                 via ``input_uri``. If set, ``input_uri`` should be unset.
             video_context (Union[dict, ~google.cloud.videointelligence_v1.types.VideoContext]): Additional video context and/or feature-specific parameters.

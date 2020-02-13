@@ -87,7 +87,7 @@ class TestVideoIntelligenceServiceClient(object):
         features = [features_element]
         input_uri = "gs://cloud-samples-data/video/cat.mp4"
 
-        response = client.annotate_video(features, input_uri=input_uri)
+        response = client.annotate_video(input_uri=input_uri, features=features)
         result = response.result()
         assert expected_response == result
 
@@ -118,6 +118,6 @@ class TestVideoIntelligenceServiceClient(object):
         features = [features_element]
         input_uri = "gs://cloud-samples-data/video/cat.mp4"
 
-        response = client.annotate_video(features, input_uri=input_uri)
+        response = client.annotate_video(input_uri=input_uri, features=features)
         exception = response.exception()
         assert exception.errors[0] == error
