@@ -2392,8 +2392,8 @@ NormalizedBoundingBox = _reflection.GeneratedProtocolMessageType(
     dict(
         DESCRIPTOR=_NORMALIZEDBOUNDINGBOX,
         __module__="google.cloud.videointelligence_v1p2beta1.proto.video_intelligence_pb2",
-        __doc__="""Normalized bounding box. The normalized vertex coordinates
-  are relative to the original image. Range: [0, 1].
+        __doc__="""Normalized bounding box. The normalized vertex coordinates are relative
+  to the original image. Range: [0, 1].
   
   
   Attributes:
@@ -2459,8 +2459,8 @@ AnnotateVideoResponse = _reflection.GeneratedProtocolMessageType(
     dict(
         DESCRIPTOR=_ANNOTATEVIDEORESPONSE,
         __module__="google.cloud.videointelligence_v1p2beta1.proto.video_intelligence_pb2",
-        __doc__="""Video annotation response. Included in the ``response`` field of the
-  ``Operation`` returned by the ``GetOperation`` call of the
+        __doc__="""Video annotation response. Included in the ``response``
+  field of the ``Operation`` returned by the ``GetOperation`` call of the
   ``google::longrunning::Operations`` service.
   
   
