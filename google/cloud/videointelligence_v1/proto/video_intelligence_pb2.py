@@ -4401,8 +4401,8 @@ SpeechContext = _reflection.GeneratedProtocolMessageType(
     dict(
         DESCRIPTOR=_SPEECHCONTEXT,
         __module__="google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
-        __doc__="""Provides "hints" to the speech recognizer to favor specific words and
-  phrases in the results.
+        __doc__="""Provides "hints" to the speech recognizer to favor
+  specific words and phrases in the results.
   
   
   Attributes:
