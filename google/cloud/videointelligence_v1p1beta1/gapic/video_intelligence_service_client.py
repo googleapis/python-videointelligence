@@ -193,9 +193,9 @@ class VideoIntelligenceServiceClient(object):
     # Service calls
     def annotate_video(
         self,
+        features,
         input_uri=None,
         input_content=None,
-        features=None,
         video_context=None,
         output_uri=None,
         location_id=None,
@@ -204,10 +204,10 @@ class VideoIntelligenceServiceClient(object):
         metadata=None,
     ):
         """
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        The plural name used in the resource name, such as 'projects' for
+        the name of 'projects/{project}'. It is the same concept of the
+        ``plural`` field in k8s CRD spec
+        https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
 
         Example:
             >>> from google.cloud import videointelligence_v1p1beta1
@@ -215,11 +215,11 @@ class VideoIntelligenceServiceClient(object):
             >>>
             >>> client = videointelligence_v1p1beta1.VideoIntelligenceServiceClient()
             >>>
-            >>> input_uri = 'gs://cloud-samples-data/video/cat.mp4'
             >>> features_element = enums.Feature.LABEL_DETECTION
             >>> features = [features_element]
+            >>> input_uri = 'gs://cloud-samples-data/video/cat.mp4'
             >>>
-            >>> response = client.annotate_video(input_uri=input_uri, features=features)
+            >>> response = client.annotate_video(features, input_uri=input_uri)
             >>>
             >>> def callback(operation_future):
             ...     # Handle result.
@@ -231,35 +231,43 @@ class VideoIntelligenceServiceClient(object):
             >>> metadata = response.metadata()
 
         Args:
-            input_uri (str): Input video location. Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__. A
-                video URI may include wildcards in ``object-id``, and thus identify
-                multiple videos. Supported wildcards: '\*' to match 0 or more
-                characters; '?' to match 1 character. If unset, the input video should
-                be embedded in the request as ``input_content``. If set,
-                ``input_content`` should be unset.
-            input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
-                via ``input_uri``. If set, ``input_uri`` should be unset.
             features (list[~google.cloud.videointelligence_v1p1beta1.types.Feature]): Required. Requested video annotation features.
+            input_uri (str): Required. The message name of the metadata type for this
+                long-running operation.
+
+                If the response is in a different package from the rpc, a
+                fully-qualified message name must be used (e.g.
+                ``google.protobuf.Struct``).
+
+                Note: Altering this value constitutes a breaking change.
+            input_content (bytes): Manages long-running operations with an API service.
+
+                When an API method normally takes long time to complete, it can be
+                designed to return ``Operation`` to the client, and the client can use
+                this interface to receive the real response asynchronously by polling
+                the operation resource, or pass the operation resource to another API
+                (such as Google Cloud Pub/Sub API) to receive the response. Any API
+                service that returns long-running operations should implement the
+                ``Operations`` interface so developers can have a consistent client
+                experience.
             video_context (Union[dict, ~google.cloud.videointelligence_v1p1beta1.types.VideoContext]): Additional video context and/or feature-specific parameters.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.videointelligence_v1p1beta1.types.VideoContext`
-            output_uri (str): Optional. Location where the output (in JSON format) should be stored.
-                Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__.
-            location_id (str): Optional. Cloud region where annotation should take place. Supported
-                cloud regions: ``us-east1``, ``us-west1``, ``europe-west1``,
-                ``asia-east1``. If no region is specified, a region will be determined
-                based on video file location.
+            output_uri (str): The jstype option determines the JavaScript type used for values of
+                the field. The option is permitted only for 64 bit integral and fixed
+                types (int64, uint64, sint64, fixed64, sfixed64). A field with jstype
+                JS_STRING is represented as JavaScript string, which avoids loss of
+                precision that can happen when a large value is converted to a floating
+                point JavaScript. Specifying JS_NUMBER for the jstype causes the
+                generated JavaScript code to use the JavaScript "number" type. The
+                behavior of the default option JS_NORMAL is implementation dependent.
+
+                This option is an enum to permit additional types to be added, e.g.
+                goog.math.Integer.
+            location_id (str): What labels should be detected with LABEL_DETECTION, in addition to
+                video-level labels or segment-level labels. If unspecified, defaults to
+                ``SHOT_MODE``.
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
                 be retried using a default configuration.
@@ -291,9 +299,9 @@ class VideoIntelligenceServiceClient(object):
             )
 
         request = video_intelligence_pb2.AnnotateVideoRequest(
+            features=features,
             input_uri=input_uri,
             input_content=input_content,
-            features=features,
             video_context=video_context,
             output_uri=output_uri,
             location_id=location_id,

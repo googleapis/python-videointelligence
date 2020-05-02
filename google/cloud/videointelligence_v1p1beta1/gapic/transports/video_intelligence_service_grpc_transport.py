@@ -124,10 +124,10 @@ class VideoIntelligenceServiceGrpcTransport(object):
     def annotate_video(self):
         """Return the gRPC stub for :meth:`VideoIntelligenceServiceClient.annotate_video`.
 
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        The plural name used in the resource name, such as 'projects' for
+        the name of 'projects/{project}'. It is the same concept of the
+        ``plural`` field in k8s CRD spec
+        https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
 
         Returns:
             Callable: A callable which accepts the appropriate

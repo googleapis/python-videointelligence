@@ -124,10 +124,9 @@ class VideoIntelligenceServiceGrpcTransport(object):
     def annotate_video(self):
         """Return the gRPC stub for :meth:`VideoIntelligenceServiceClient.annotate_video`.
 
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        Whether the video has been shot from a stationary (i.e. non-moving)
+        camera. When set to true, might improve detection accuracy for moving
+        objects. Should be used with ``SHOT_AND_FRAME_MODE`` enabled.
 
         Returns:
             Callable: A callable which accepts the appropriate

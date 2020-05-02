@@ -191,9 +191,9 @@ class VideoIntelligenceServiceClient(object):
     # Service calls
     def annotate_video(
         self,
+        features,
         input_uri=None,
         input_content=None,
-        features=None,
         video_context=None,
         output_uri=None,
         location_id=None,
@@ -202,10 +202,37 @@ class VideoIntelligenceServiceClient(object):
         metadata=None,
     ):
         """
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        Protocol Buffers - Google's data interchange format Copyright 2008
+        Google Inc. All rights reserved.
+        https://developers.google.com/protocol-buffers/
+
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are
+        met:
+
+        ::
+
+            * Redistributions of source code must retain the above copyright
+
+        notice, this list of conditions and the following disclaimer. \*
+        Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution. \*
+        Neither the name of Google Inc. nor the names of its contributors may be
+        used to endorse or promote products derived from this software without
+        specific prior written permission.
+
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+        IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+        TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+        PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER
+        OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+        EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+        PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+        PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+        LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+        NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+        SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
         Example:
             >>> from google.cloud import videointelligence_v1beta2
@@ -213,11 +240,11 @@ class VideoIntelligenceServiceClient(object):
             >>>
             >>> client = videointelligence_v1beta2.VideoIntelligenceServiceClient()
             >>>
-            >>> input_uri = 'gs://cloud-samples-data/video/cat.mp4'
             >>> features_element = enums.Feature.LABEL_DETECTION
             >>> features = [features_element]
+            >>> input_uri = 'gs://cloud-samples-data/video/cat.mp4'
             >>>
-            >>> response = client.annotate_video(input_uri=input_uri, features=features)
+            >>> response = client.annotate_video(features, input_uri=input_uri)
             >>>
             >>> def callback(operation_future):
             ...     # Handle result.
@@ -229,35 +256,42 @@ class VideoIntelligenceServiceClient(object):
             >>> metadata = response.metadata()
 
         Args:
-            input_uri (str): Input video location. Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__. A
-                video URI may include wildcards in ``object-id``, and thus identify
-                multiple videos. Supported wildcards: '\*' to match 0 or more
-                characters; '?' to match 1 character. If unset, the input video should
-                be embedded in the request as ``input_content``. If set,
-                ``input_content`` should be unset.
-            input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
-                via ``input_uri``. If set, ``input_uri`` should be unset.
             features (list[~google.cloud.videointelligence_v1beta2.types.Feature]): Required. Requested video annotation features.
+            input_uri (str): Video file location in `Google Cloud
+                Storage <https://cloud.google.com/storage/>`__.
+            input_content (bytes): Required. The message name of the metadata type for this
+                long-running operation.
+
+                If the response is in a different package from the rpc, a
+                fully-qualified message name must be used (e.g.
+                ``google.protobuf.Struct``).
+
+                Note: Altering this value constitutes a breaking change.
             video_context (Union[dict, ~google.cloud.videointelligence_v1beta2.types.VideoContext]): Additional video context and/or feature-specific parameters.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.videointelligence_v1beta2.types.VideoContext`
-            output_uri (str): Optional. Location where the output (in JSON format) should be stored.
-                Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__.
-            location_id (str): Optional. Cloud region where annotation should take place. Supported
-                cloud regions: ``us-east1``, ``us-west1``, ``europe-west1``,
-                ``asia-east1``. If no region is specified, a region will be determined
-                based on video file location.
+            output_uri (str): Manages long-running operations with an API service.
+
+                When an API method normally takes long time to complete, it can be
+                designed to return ``Operation`` to the client, and the client can use
+                this interface to receive the real response asynchronously by polling
+                the operation resource, or pass the operation resource to another API
+                (such as Google Cloud Pub/Sub API) to receive the response. Any API
+                service that returns long-running operations should implement the
+                ``Operations`` interface so developers can have a consistent client
+                experience.
+            location_id (str): The jstype option determines the JavaScript type used for values of
+                the field. The option is permitted only for 64 bit integral and fixed
+                types (int64, uint64, sint64, fixed64, sfixed64). A field with jstype
+                JS_STRING is represented as JavaScript string, which avoids loss of
+                precision that can happen when a large value is converted to a floating
+                point JavaScript. Specifying JS_NUMBER for the jstype causes the
+                generated JavaScript code to use the JavaScript "number" type. The
+                behavior of the default option JS_NORMAL is implementation dependent.
+
+                This option is an enum to permit additional types to be added, e.g.
+                goog.math.Integer.
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
                 be retried using a default configuration.
@@ -289,9 +323,9 @@ class VideoIntelligenceServiceClient(object):
             )
 
         request = video_intelligence_pb2.AnnotateVideoRequest(
+            features=features,
             input_uri=input_uri,
             input_content=input_content,
-            features=features,
             video_context=video_context,
             output_uri=output_uri,
             location_id=location_id,

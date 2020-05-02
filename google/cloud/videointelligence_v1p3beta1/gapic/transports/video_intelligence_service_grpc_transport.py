@@ -124,10 +124,8 @@ class VideoIntelligenceServiceGrpcTransport(object):
     def annotate_video(self):
         """Return the gRPC stub for :meth:`VideoIntelligenceServiceClient.annotate_video`.
 
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        Resource name of AutoML model. Format:
+        ``projects/{project_id}/locations/{location_id}/models/{model_id}``
 
         Returns:
             Callable: A callable which accepts the appropriate

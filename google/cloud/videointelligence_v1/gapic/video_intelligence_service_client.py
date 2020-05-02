@@ -205,10 +205,8 @@ class VideoIntelligenceServiceClient(object):
         metadata=None,
     ):
         """
-        Performs asynchronous video annotation. Progress and results can be
-        retrieved through the ``google.longrunning.Operations`` interface.
-        ``Operation.metadata`` contains ``AnnotateVideoProgress`` (progress).
-        ``Operation.response`` contains ``AnnotateVideoResponse`` (results).
+        An annotation that describes a resource definition without a
+        corresponding message; see ``ResourceDescriptor``.
 
         Example:
             >>> from google.cloud import videointelligence_v1
@@ -232,35 +230,32 @@ class VideoIntelligenceServiceClient(object):
             >>> metadata = response.metadata()
 
         Args:
-            input_uri (str): Input video location. Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__. A
-                video URI may include wildcards in ``object-id``, and thus identify
-                multiple videos. Supported wildcards: '\*' to match 0 or more
-                characters; '?' to match 1 character. If unset, the input video should
-                be embedded in the request as ``input_content``. If set,
-                ``input_content`` should be unset.
-            input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
-                via ``input_uri``. If set, ``input_uri`` should be unset.
             features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
+            input_uri (str): The resource type of a child collection that the annotated field
+                references. This is useful for annotating the ``parent`` field that
+                doesn't have a fixed resource type.
+
+                Example:
+
+                ::
+
+                    message ListLogEntriesRequest {
+                      string parent = 1 [(google.api.resource_reference) = {
+                        child_type: "logging.googleapis.com/LogEntry"
+                      };
+                    }
+            input_content (bytes): Config for SHOT_CHANGE_DETECTION.
             video_context (Union[dict, ~google.cloud.videointelligence_v1.types.VideoContext]): Additional video context and/or feature-specific parameters.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.videointelligence_v1.types.VideoContext`
-            output_uri (str): Optional. Location where the output (in JSON format) should be stored.
-                Currently, only `Google Cloud
-                Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
-                must be specified in the following format: ``gs://bucket-id/object-id``
-                (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
-                more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__.
-            location_id (str): Optional. Cloud region where annotation should take place. Supported
-                cloud regions: ``us-east1``, ``us-west1``, ``europe-west1``,
-                ``asia-east1``. If no region is specified, a region will be determined
-                based on video file location.
+            output_uri (str): The same concept of the ``singular`` field in k8s CRD spec
+                https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
+                Such as "project" for the ``resourcemanager.googleapis.com/Project``
+                type.
+            location_id (str): Additional HTTP bindings for the selector. Nested bindings must not
+                contain an ``additional_bindings`` field themselves (that is, the
+                nesting may only be one level deep).
             retry (Optional[google.api_core.retry.Retry]):  A retry object used
                 to retry requests. If ``None`` is specified, requests will
                 be retried using a default configuration.
