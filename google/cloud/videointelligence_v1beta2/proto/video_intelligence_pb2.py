@@ -2098,8 +2098,8 @@ NormalizedBoundingBox = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _NORMALIZEDBOUNDINGBOX,
         "__module__": "google.cloud.videointelligence_v1beta2.proto.video_intelligence_pb2",
-        "__doc__": """Normalized bounding box. The normalized vertex coordinates are relative
-  to the original image. Range: [0, 1].
+        "__doc__": """Normalized bounding box. The normalized vertex coordinates
+  are relative to the original image. Range: [0, 1].
   
   
   Attributes:
