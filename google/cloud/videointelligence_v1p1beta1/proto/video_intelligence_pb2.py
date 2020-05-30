@@ -1824,8 +1824,6 @@ AnnotateVideoRequest = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _ANNOTATEVIDEOREQUEST,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Video annotation request.
-  
-  
   Attributes:
       input_uri:
           Input video location. Currently, only `Google Cloud Storage
@@ -1875,8 +1873,6 @@ VideoContext = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _VIDEOCONTEXT,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Video context and/or feature-specific parameters.
-  
-  
   Attributes:
       segments:
           Video segments to annotate. The segments may overlap and are
@@ -1903,8 +1899,6 @@ LabelDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _LABELDETECTIONCONFIG,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Config for LABEL_DETECTION.
-  
-  
   Attributes:
       label_detection_mode:
           What labels should be detected with LABEL_DETECTION, in
@@ -1931,8 +1925,6 @@ ShotChangeDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _SHOTCHANGEDETECTIONCONFIG,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Config for SHOT_CHANGE_DETECTION.
-  
-  
   Attributes:
       model:
           Model to use for shot change detection. Supported values:
@@ -1950,8 +1942,6 @@ ExplicitContentDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _EXPLICITCONTENTDETECTIONCONFIG,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Config for EXPLICIT_CONTENT_DETECTION.
-  
-  
   Attributes:
       model:
           Model to use for explicit content detection. Supported values:
@@ -1969,8 +1959,6 @@ VideoSegment = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _VIDEOSEGMENT,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Video segment.
-  
-  
   Attributes:
       start_time_offset:
           Time-offset, relative to the beginning of the video,
@@ -1990,10 +1978,7 @@ LabelSegment = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _LABELSEGMENT,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Video segment level annotation results for label
-  detection.
-  
-  
+        "__doc__": """Video segment level annotation results for label detection.
   Attributes:
       segment:
           Video segment where a label was detected.
@@ -2012,8 +1997,6 @@ LabelFrame = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _LABELFRAME,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Video frame level annotation results for label detection.
-  
-  
   Attributes:
       time_offset:
           Time-offset, relative to the beginning of the video,
@@ -2033,8 +2016,6 @@ Entity = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _ENTITY,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Detected entity from video analysis.
-  
-  
   Attributes:
       entity_id:
           Opaque entity ID. Some IDs may be available in `Google
@@ -2057,8 +2038,6 @@ LabelAnnotation = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _LABELANNOTATION,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Label annotation.
-  
-  
   Attributes:
       entity:
           Detected entity.
@@ -2084,8 +2063,6 @@ ExplicitContentFrame = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _EXPLICITCONTENTFRAME,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Video frame level annotation results for explicit content.
-  
-  
   Attributes:
       time_offset:
           Time-offset, relative to the beginning of the video,
@@ -2104,11 +2081,9 @@ ExplicitContentAnnotation = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _EXPLICITCONTENTANNOTATION,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Explicit content annotation (based on per-frame visual
-  signals only). If no explicit content has been detected in a frame, no
-  annotations are present for that frame.
-  
-  
+        "__doc__": """Explicit content annotation (based on per-frame visual signals only).
+  If no explicit content has been detected in a frame, no annotations
+  are present for that frame.
   Attributes:
       frames:
           All video frames where explicit content was detected.
@@ -2125,8 +2100,6 @@ VideoAnnotationResults = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _VIDEOANNOTATIONRESULTS,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Annotation results for a single video.
-  
-  
   Attributes:
       input_uri:
           Output only. Video file location in `Google Cloud Storage
@@ -2162,11 +2135,9 @@ AnnotateVideoResponse = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _ANNOTATEVIDEORESPONSE,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Video annotation response. Included in the ``response``
-  field of the ``Operation`` returned by the ``GetOperation`` call of the
+        "__doc__": """Video annotation response. Included in the ``response`` field of the
+  ``Operation`` returned by the ``GetOperation`` call of the
   ``google::longrunning::Operations`` service.
-  
-  
   Attributes:
       annotation_results:
           Annotation results for all videos specified in
@@ -2184,8 +2155,6 @@ VideoAnnotationProgress = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _VIDEOANNOTATIONPROGRESS,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Annotation progress for a single video.
-  
-  
   Attributes:
       input_uri:
           Output only. Video file location in `Google Cloud Storage
@@ -2209,11 +2178,9 @@ AnnotateVideoProgress = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _ANNOTATEVIDEOPROGRESS,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Video annotation progress. Included in the ``metadata``
-  field of the ``Operation`` returned by the ``GetOperation`` call of the
+        "__doc__": """Video annotation progress. Included in the ``metadata`` field of the
+  ``Operation`` returned by the ``GetOperation`` call of the
   ``google::longrunning::Operations`` service.
-  
-  
   Attributes:
       annotation_progress:
           Progress metadata for all videos specified in
@@ -2231,8 +2198,6 @@ SpeechTranscriptionConfig = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _SPEECHTRANSCRIPTIONCONFIG,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Config for SPEECH_TRANSCRIPTION.
-  
-  
   Attributes:
       language_code:
           Required. *Required* The language of the supplied audio as a
@@ -2282,10 +2247,8 @@ SpeechContext = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _SPEECHCONTEXT,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Provides “hints” to the speech recognizer to favor
-  specific words and phrases in the results.
-  
-  
+        "__doc__": """Provides “hints” to the speech recognizer to favor specific words and
+  phrases in the results.
   Attributes:
       phrases:
           Optional. A list of strings containing words and phrases
@@ -2308,10 +2271,7 @@ SpeechTranscription = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _SPEECHTRANSCRIPTION,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """A speech recognition result corresponding to a portion of
-  the audio.
-  
-  
+        "__doc__": """A speech recognition result corresponding to a portion of the audio.
   Attributes:
       alternatives:
           May contain one or more recognition hypotheses (up to the
@@ -2332,8 +2292,6 @@ SpeechRecognitionAlternative = _reflection.GeneratedProtocolMessageType(
         "DESCRIPTOR": _SPEECHRECOGNITIONALTERNATIVE,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
         "__doc__": """Alternative hypotheses (a.k.a. n-best list).
-  
-  
   Attributes:
       transcript:
           Output only. Transcript text representing the words that the
@@ -2361,11 +2319,9 @@ WordInfo = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _WORDINFO,
         "__module__": "google.cloud.videointelligence_v1p1beta1.proto.video_intelligence_pb2",
-        "__doc__": """Word-specific information for recognized words. Word
-  information is only included in the response when certain request
-  parameters are set, such as ``enable_word_time_offsets``.
-  
-  
+        "__doc__": """Word-specific information for recognized words. Word information is
+  only included in the response when certain request parameters are set,
+  such as ``enable_word_time_offsets``.
   Attributes:
       start_time:
           Output only. Time offset relative to the beginning of the
