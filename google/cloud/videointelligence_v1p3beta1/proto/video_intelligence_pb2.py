@@ -29,6 +29,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     package="google.cloud.videointelligence.v1p3beta1",
     syntax="proto3",
     serialized_options=b"\n,com.google.cloud.videointelligence.v1p3beta1B\035VideoIntelligenceServiceProtoP\001ZYgoogle.golang.org/genproto/googleapis/cloud/videointelligence/v1p3beta1;videointelligence\252\002(Google.Cloud.VideoIntelligence.V1P3Beta1\312\002(Google\\Cloud\\VideoIntelligence\\V1p3beta1",
+    create_key=_descriptor._internal_create_key,
     serialized_pb=b'\nGgoogle/cloud/videointelligence_v1p3beta1/proto/video_intelligence.proto\x12(google.cloud.videointelligence.v1p3beta1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a#google/longrunning/operations.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x17google/rpc/status.proto"\x8c\x02\n\x14\x41nnotateVideoRequest\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12\x15\n\rinput_content\x18\x06 \x01(\x0c\x12H\n\x08\x66\x65\x61tures\x18\x02 \x03(\x0e\x32\x31.google.cloud.videointelligence.v1p3beta1.FeatureB\x03\xe0\x41\x02\x12M\n\rvideo_context\x18\x03 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoContext\x12\x17\n\noutput_uri\x18\x04 \x01(\tB\x03\xe0\x41\x01\x12\x18\n\x0blocation_id\x18\x05 \x01(\tB\x03\xe0\x41\x01"\x80\x07\n\x0cVideoContext\x12H\n\x08segments\x18\x01 \x03(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12^\n\x16label_detection_config\x18\x02 \x01(\x0b\x32>.google.cloud.videointelligence.v1p3beta1.LabelDetectionConfig\x12i\n\x1cshot_change_detection_config\x18\x03 \x01(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.ShotChangeDetectionConfig\x12s\n!explicit_content_detection_config\x18\x04 \x01(\x0b\x32H.google.cloud.videointelligence.v1p3beta1.ExplicitContentDetectionConfig\x12\\\n\x15\x66\x61\x63\x65_detection_config\x18\x05 \x01(\x0b\x32=.google.cloud.videointelligence.v1p3beta1.FaceDetectionConfig\x12h\n\x1bspeech_transcription_config\x18\x06 \x01(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.SpeechTranscriptionConfig\x12\\\n\x15text_detection_config\x18\x08 \x01(\x0b\x32=.google.cloud.videointelligence.v1p3beta1.TextDetectionConfig\x12`\n\x17person_detection_config\x18\x0b \x01(\x0b\x32?.google.cloud.videointelligence.v1p3beta1.PersonDetectionConfig\x12^\n\x16object_tracking_config\x18\r \x01(\x0b\x32>.google.cloud.videointelligence.v1p3beta1.ObjectTrackingConfig"\xe4\x01\n\x14LabelDetectionConfig\x12Z\n\x14label_detection_mode\x18\x01 \x01(\x0e\x32<.google.cloud.videointelligence.v1p3beta1.LabelDetectionMode\x12\x19\n\x11stationary_camera\x18\x02 \x01(\x08\x12\r\n\x05model\x18\x03 \x01(\t\x12"\n\x1a\x66rame_confidence_threshold\x18\x04 \x01(\x02\x12"\n\x1avideo_confidence_threshold\x18\x05 \x01(\x02"*\n\x19ShotChangeDetectionConfig\x12\r\n\x05model\x18\x01 \x01(\t"%\n\x14ObjectTrackingConfig\x12\r\n\x05model\x18\x01 \x01(\t"/\n\x1e\x45xplicitContentDetectionConfig\x12\r\n\x05model\x18\x01 \x01(\t"`\n\x13\x46\x61\x63\x65\x44\x65tectionConfig\x12\r\n\x05model\x18\x01 \x01(\t\x12\x1e\n\x16include_bounding_boxes\x18\x02 \x01(\x08\x12\x1a\n\x12include_attributes\x18\x05 \x01(\x08"s\n\x15PersonDetectionConfig\x12\x1e\n\x16include_bounding_boxes\x18\x01 \x01(\x08\x12\x1e\n\x16include_pose_landmarks\x18\x02 \x01(\x08\x12\x1a\n\x12include_attributes\x18\x03 \x01(\x08"<\n\x13TextDetectionConfig\x12\x16\n\x0elanguage_hints\x18\x01 \x03(\t\x12\r\n\x05model\x18\x02 \x01(\t"x\n\x0cVideoSegment\x12\x34\n\x11start_time_offset\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x32\n\x0f\x65nd_time_offset\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration"k\n\x0cLabelSegment\x12G\n\x07segment\x18\x01 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\x12\n\nconfidence\x18\x02 \x01(\x02"P\n\nLabelFrame\x12.\n\x0btime_offset\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x12\n\nconfidence\x18\x02 \x01(\x02"G\n\x06\x45ntity\x12\x11\n\tentity_id\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x15\n\rlanguage_code\x18\x03 \x01(\t"\xb0\x02\n\x0fLabelAnnotation\x12@\n\x06\x65ntity\x18\x01 \x01(\x0b\x32\x30.google.cloud.videointelligence.v1p3beta1.Entity\x12K\n\x11\x63\x61tegory_entities\x18\x02 \x03(\x0b\x32\x30.google.cloud.videointelligence.v1p3beta1.Entity\x12H\n\x08segments\x18\x03 \x03(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.LabelSegment\x12\x44\n\x06\x66rames\x18\x04 \x03(\x0b\x32\x34.google.cloud.videointelligence.v1p3beta1.LabelFrame"\x9c\x01\n\x14\x45xplicitContentFrame\x12.\n\x0btime_offset\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12T\n\x16pornography_likelihood\x18\x02 \x01(\x0e\x32\x34.google.cloud.videointelligence.v1p3beta1.Likelihood"k\n\x19\x45xplicitContentAnnotation\x12N\n\x06\x66rames\x18\x01 \x03(\x0b\x32>.google.cloud.videointelligence.v1p3beta1.ExplicitContentFrame"Q\n\x15NormalizedBoundingBox\x12\x0c\n\x04left\x18\x01 \x01(\x02\x12\x0b\n\x03top\x18\x02 \x01(\x02\x12\r\n\x05right\x18\x03 \x01(\x02\x12\x0e\n\x06\x62ottom\x18\x04 \x01(\x02"\xcf\x02\n\x11TimestampedObject\x12`\n\x17normalized_bounding_box\x18\x01 \x01(\x0b\x32?.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox\x12.\n\x0btime_offset\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\x12T\n\nattributes\x18\x03 \x03(\x0b\x32;.google.cloud.videointelligence.v1p3beta1.DetectedAttributeB\x03\xe0\x41\x01\x12R\n\tlandmarks\x18\x04 \x03(\x0b\x32:.google.cloud.videointelligence.v1p3beta1.DetectedLandmarkB\x03\xe0\x41\x01"\x99\x02\n\x05Track\x12G\n\x07segment\x18\x01 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12X\n\x13timestamped_objects\x18\x02 \x03(\x0b\x32;.google.cloud.videointelligence.v1p3beta1.TimestampedObject\x12T\n\nattributes\x18\x03 \x03(\x0b\x32;.google.cloud.videointelligence.v1p3beta1.DetectedAttributeB\x03\xe0\x41\x01\x12\x17\n\nconfidence\x18\x04 \x01(\x02\x42\x03\xe0\x41\x01"D\n\x11\x44\x65tectedAttribute\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\r\n\x05value\x18\x03 \x01(\t"D\n\tCelebrity\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t"\xab\x02\n\x0e\x43\x65lebrityTrack\x12\x61\n\x0b\x63\x65lebrities\x18\x01 \x03(\x0b\x32L.google.cloud.videointelligence.v1p3beta1.CelebrityTrack.RecognizedCelebrity\x12\x43\n\nface_track\x18\x03 \x01(\x0b\x32/.google.cloud.videointelligence.v1p3beta1.Track\x1aq\n\x13RecognizedCelebrity\x12\x46\n\tcelebrity\x18\x01 \x01(\x0b\x32\x33.google.cloud.videointelligence.v1p3beta1.Celebrity\x12\x12\n\nconfidence\x18\x02 \x01(\x02"t\n\x1e\x43\x65lebrityRecognitionAnnotation\x12R\n\x10\x63\x65lebrity_tracks\x18\x01 \x03(\x0b\x32\x38.google.cloud.videointelligence.v1p3beta1.CelebrityTrack"\x7f\n\x10\x44\x65tectedLandmark\x12\x0c\n\x04name\x18\x01 \x01(\t\x12I\n\x05point\x18\x02 \x01(\x0b\x32:.google.cloud.videointelligence.v1p3beta1.NormalizedVertex\x12\x12\n\nconfidence\x18\x03 \x01(\x02"m\n\x17\x46\x61\x63\x65\x44\x65tectionAnnotation\x12?\n\x06tracks\x18\x03 \x03(\x0b\x32/.google.cloud.videointelligence.v1p3beta1.Track\x12\x11\n\tthumbnail\x18\x04 \x01(\x0c"\\\n\x19PersonDetectionAnnotation\x12?\n\x06tracks\x18\x01 \x03(\x0b\x32/.google.cloud.videointelligence.v1p3beta1.Track"\xef\x0b\n\x16VideoAnnotationResults\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12G\n\x07segment\x18\n \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\\\n\x19segment_label_annotations\x18\x02 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12\x65\n"segment_presence_label_annotations\x18\x17 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12Y\n\x16shot_label_annotations\x18\x03 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12\x62\n\x1fshot_presence_label_annotations\x18\x18 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12Z\n\x17\x66rame_label_annotations\x18\x04 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12\x65\n\x1a\x66\x61\x63\x65_detection_annotations\x18\r \x03(\x0b\x32\x41.google.cloud.videointelligence.v1p3beta1.FaceDetectionAnnotation\x12P\n\x10shot_annotations\x18\x06 \x03(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12`\n\x13\x65xplicit_annotation\x18\x07 \x01(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.ExplicitContentAnnotation\x12\\\n\x15speech_transcriptions\x18\x0b \x03(\x0b\x32=.google.cloud.videointelligence.v1p3beta1.SpeechTranscription\x12R\n\x10text_annotations\x18\x0c \x03(\x0b\x32\x38.google.cloud.videointelligence.v1p3beta1.TextAnnotation\x12^\n\x12object_annotations\x18\x0e \x03(\x0b\x32\x42.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation\x12i\n\x1clogo_recognition_annotations\x18\x13 \x03(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.LogoRecognitionAnnotation\x12i\n\x1cperson_detection_annotations\x18\x14 \x03(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.PersonDetectionAnnotation\x12s\n!celebrity_recognition_annotations\x18\x15 \x01(\x0b\x32H.google.cloud.videointelligence.v1p3beta1.CelebrityRecognitionAnnotation\x12!\n\x05\x65rror\x18\t \x01(\x0b\x32\x12.google.rpc.Status"u\n\x15\x41nnotateVideoResponse\x12\\\n\x12\x61nnotation_results\x18\x01 \x03(\x0b\x32@.google.cloud.videointelligence.v1p3beta1.VideoAnnotationResults"\xb4\x02\n\x17VideoAnnotationProgress\x12\x11\n\tinput_uri\x18\x01 \x01(\t\x12\x18\n\x10progress_percent\x18\x02 \x01(\x05\x12.\n\nstart_time\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x0bupdate_time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12\x42\n\x07\x66\x65\x61ture\x18\x05 \x01(\x0e\x32\x31.google.cloud.videointelligence.v1p3beta1.Feature\x12G\n\x07segment\x18\x06 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment"w\n\x15\x41nnotateVideoProgress\x12^\n\x13\x61nnotation_progress\x18\x01 \x03(\x0b\x32\x41.google.cloud.videointelligence.v1p3beta1.VideoAnnotationProgress"\x88\x03\n\x19SpeechTranscriptionConfig\x12\x1a\n\rlanguage_code\x18\x01 \x01(\tB\x03\xe0\x41\x02\x12\x1d\n\x10max_alternatives\x18\x02 \x01(\x05\x42\x03\xe0\x41\x01\x12\x1d\n\x10\x66ilter_profanity\x18\x03 \x01(\x08\x42\x03\xe0\x41\x01\x12U\n\x0fspeech_contexts\x18\x04 \x03(\x0b\x32\x37.google.cloud.videointelligence.v1p3beta1.SpeechContextB\x03\xe0\x41\x01\x12)\n\x1c\x65nable_automatic_punctuation\x18\x05 \x01(\x08\x42\x03\xe0\x41\x01\x12\x19\n\x0c\x61udio_tracks\x18\x06 \x03(\x05\x42\x03\xe0\x41\x01\x12\'\n\x1a\x65nable_speaker_diarization\x18\x07 \x01(\x08\x42\x03\xe0\x41\x01\x12&\n\x19\x64iarization_speaker_count\x18\x08 \x01(\x05\x42\x03\xe0\x41\x01\x12#\n\x16\x65nable_word_confidence\x18\t \x01(\x08\x42\x03\xe0\x41\x01"%\n\rSpeechContext\x12\x14\n\x07phrases\x18\x01 \x03(\tB\x03\xe0\x41\x01"\x8f\x01\n\x13SpeechTranscription\x12\\\n\x0c\x61lternatives\x18\x01 \x03(\x0b\x32\x46.google.cloud.videointelligence.v1p3beta1.SpeechRecognitionAlternative\x12\x1a\n\rlanguage_code\x18\x02 \x01(\tB\x03\xe0\x41\x03"\x93\x01\n\x1cSpeechRecognitionAlternative\x12\x12\n\ntranscript\x18\x01 \x01(\t\x12\x17\n\nconfidence\x18\x02 \x01(\x02\x42\x03\xe0\x41\x03\x12\x46\n\x05words\x18\x03 \x03(\x0b\x32\x32.google.cloud.videointelligence.v1p3beta1.WordInfoB\x03\xe0\x41\x03"\xa7\x01\n\x08WordInfo\x12-\n\nstart_time\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12+\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x0c\n\x04word\x18\x03 \x01(\t\x12\x17\n\nconfidence\x18\x04 \x01(\x02\x42\x03\xe0\x41\x03\x12\x18\n\x0bspeaker_tag\x18\x05 \x01(\x05\x42\x03\xe0\x41\x03"(\n\x10NormalizedVertex\x12\t\n\x01x\x18\x01 \x01(\x02\x12\t\n\x01y\x18\x02 \x01(\x02"f\n\x16NormalizedBoundingPoly\x12L\n\x08vertices\x18\x01 \x03(\x0b\x32:.google.cloud.videointelligence.v1p3beta1.NormalizedVertex"\xaf\x01\n\x0bTextSegment\x12G\n\x07segment\x18\x01 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x43\n\x06\x66rames\x18\x03 \x03(\x0b\x32\x33.google.cloud.videointelligence.v1p3beta1.TextFrame"\x9b\x01\n\tTextFrame\x12^\n\x14rotated_bounding_box\x18\x01 \x01(\x0b\x32@.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingPoly\x12.\n\x0btime_offset\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration"g\n\x0eTextAnnotation\x12\x0c\n\x04text\x18\x01 \x01(\t\x12G\n\x08segments\x18\x02 \x03(\x0b\x32\x35.google.cloud.videointelligence.v1p3beta1.TextSegment"\xa7\x01\n\x13ObjectTrackingFrame\x12`\n\x17normalized_bounding_box\x18\x01 \x01(\x0b\x32?.google.cloud.videointelligence.v1p3beta1.NormalizedBoundingBox\x12.\n\x0btime_offset\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration"\xac\x02\n\x18ObjectTrackingAnnotation\x12I\n\x07segment\x18\x03 \x01(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegmentH\x00\x12\x12\n\x08track_id\x18\x05 \x01(\x03H\x00\x12@\n\x06\x65ntity\x18\x01 \x01(\x0b\x32\x30.google.cloud.videointelligence.v1p3beta1.Entity\x12\x12\n\nconfidence\x18\x04 \x01(\x02\x12M\n\x06\x66rames\x18\x02 \x03(\x0b\x32=.google.cloud.videointelligence.v1p3beta1.ObjectTrackingFrameB\x0c\n\ntrack_info"\xe8\x01\n\x19LogoRecognitionAnnotation\x12@\n\x06\x65ntity\x18\x01 \x01(\x0b\x32\x30.google.cloud.videointelligence.v1p3beta1.Entity\x12?\n\x06tracks\x18\x02 \x03(\x0b\x32/.google.cloud.videointelligence.v1p3beta1.Track\x12H\n\x08segments\x18\x03 \x03(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment"\xa5\x01\n\x1dStreamingAnnotateVideoRequest\x12V\n\x0cvideo_config\x18\x01 \x01(\x0b\x32>.google.cloud.videointelligence.v1p3beta1.StreamingVideoConfigH\x00\x12\x17\n\rinput_content\x18\x02 \x01(\x0cH\x00\x42\x13\n\x11streaming_request"\x8a\x08\n\x14StreamingVideoConfig\x12t\n\x1cshot_change_detection_config\x18\x02 \x01(\x0b\x32L.google.cloud.videointelligence.v1p3beta1.StreamingShotChangeDetectionConfigH\x00\x12i\n\x16label_detection_config\x18\x03 \x01(\x0b\x32G.google.cloud.videointelligence.v1p3beta1.StreamingLabelDetectionConfigH\x00\x12~\n!explicit_content_detection_config\x18\x04 \x01(\x0b\x32Q.google.cloud.videointelligence.v1p3beta1.StreamingExplicitContentDetectionConfigH\x00\x12i\n\x16object_tracking_config\x18\x05 \x01(\x0b\x32G.google.cloud.videointelligence.v1p3beta1.StreamingObjectTrackingConfigH\x00\x12|\n automl_action_recognition_config\x18\x17 \x01(\x0b\x32P.google.cloud.videointelligence.v1p3beta1.StreamingAutomlActionRecognitionConfigH\x00\x12u\n\x1c\x61utoml_classification_config\x18\x15 \x01(\x0b\x32M.google.cloud.videointelligence.v1p3beta1.StreamingAutomlClassificationConfigH\x00\x12v\n\x1d\x61utoml_object_tracking_config\x18\x16 \x01(\x0b\x32M.google.cloud.videointelligence.v1p3beta1.StreamingAutomlObjectTrackingConfigH\x00\x12K\n\x07\x66\x65\x61ture\x18\x01 \x01(\x0e\x32:.google.cloud.videointelligence.v1p3beta1.StreamingFeature\x12X\n\x0estorage_config\x18\x1e \x01(\x0b\x32@.google.cloud.videointelligence.v1p3beta1.StreamingStorageConfigB\x12\n\x10streaming_config"\xca\x01\n\x1eStreamingAnnotateVideoResponse\x12!\n\x05\x65rror\x18\x01 \x01(\x0b\x32\x12.google.rpc.Status\x12\x65\n\x12\x61nnotation_results\x18\x02 \x01(\x0b\x32I.google.cloud.videointelligence.v1p3beta1.StreamingVideoAnnotationResults\x12\x1e\n\x16\x61nnotation_results_uri\x18\x03 \x01(\t"\x8b\x03\n\x1fStreamingVideoAnnotationResults\x12P\n\x10shot_annotations\x18\x01 \x03(\x0b\x32\x36.google.cloud.videointelligence.v1p3beta1.VideoSegment\x12T\n\x11label_annotations\x18\x02 \x03(\x0b\x32\x39.google.cloud.videointelligence.v1p3beta1.LabelAnnotation\x12`\n\x13\x65xplicit_annotation\x18\x03 \x01(\x0b\x32\x43.google.cloud.videointelligence.v1p3beta1.ExplicitContentAnnotation\x12^\n\x12object_annotations\x18\x04 \x03(\x0b\x32\x42.google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation"$\n"StreamingShotChangeDetectionConfig":\n\x1dStreamingLabelDetectionConfig\x12\x19\n\x11stationary_camera\x18\x01 \x01(\x08")\n\'StreamingExplicitContentDetectionConfig"\x1f\n\x1dStreamingObjectTrackingConfig"<\n&StreamingAutomlActionRecognitionConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"9\n#StreamingAutomlClassificationConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"9\n#StreamingAutomlObjectTrackingConfig\x12\x12\n\nmodel_name\x18\x01 \x01(\t"o\n\x16StreamingStorageConfig\x12(\n enable_storage_annotation_result\x18\x01 \x01(\x08\x12+\n#annotation_result_storage_directory\x18\x03 \x01(\t*r\n\x12LabelDetectionMode\x12$\n LABEL_DETECTION_MODE_UNSPECIFIED\x10\x00\x12\r\n\tSHOT_MODE\x10\x01\x12\x0e\n\nFRAME_MODE\x10\x02\x12\x17\n\x13SHOT_AND_FRAME_MODE\x10\x03*t\n\nLikelihood\x12\x1a\n\x16LIKELIHOOD_UNSPECIFIED\x10\x00\x12\x11\n\rVERY_UNLIKELY\x10\x01\x12\x0c\n\x08UNLIKELY\x10\x02\x12\x0c\n\x08POSSIBLE\x10\x03\x12\n\n\x06LIKELY\x10\x04\x12\x0f\n\x0bVERY_LIKELY\x10\x05*\xb6\x02\n\x10StreamingFeature\x12!\n\x1dSTREAMING_FEATURE_UNSPECIFIED\x10\x00\x12\x1d\n\x19STREAMING_LABEL_DETECTION\x10\x01\x12#\n\x1fSTREAMING_SHOT_CHANGE_DETECTION\x10\x02\x12(\n$STREAMING_EXPLICIT_CONTENT_DETECTION\x10\x03\x12\x1d\n\x19STREAMING_OBJECT_TRACKING\x10\x04\x12\'\n#STREAMING_AUTOML_ACTION_RECOGNITION\x10\x17\x12#\n\x1fSTREAMING_AUTOML_CLASSIFICATION\x10\x15\x12$\n STREAMING_AUTOML_OBJECT_TRACKING\x10\x16*\x90\x02\n\x07\x46\x65\x61ture\x12\x17\n\x13\x46\x45\x41TURE_UNSPECIFIED\x10\x00\x12\x13\n\x0fLABEL_DETECTION\x10\x01\x12\x19\n\x15SHOT_CHANGE_DETECTION\x10\x02\x12\x1e\n\x1a\x45XPLICIT_CONTENT_DETECTION\x10\x03\x12\x12\n\x0e\x46\x41\x43\x45_DETECTION\x10\x04\x12\x18\n\x14SPEECH_TRANSCRIPTION\x10\x06\x12\x12\n\x0eTEXT_DETECTION\x10\x07\x12\x13\n\x0fOBJECT_TRACKING\x10\t\x12\x14\n\x10LOGO_RECOGNITION\x10\x0c\x12\x19\n\x15\x43\x45LEBRITY_RECOGNITION\x10\r\x12\x14\n\x10PERSON_DETECTION\x10\x0e\x32\xce\x02\n\x18VideoIntelligenceService\x12\xdb\x01\n\rAnnotateVideo\x12>.google.cloud.videointelligence.v1p3beta1.AnnotateVideoRequest\x1a\x1d.google.longrunning.Operation"k\x82\xd3\xe4\x93\x02\x1f"\x1a/v1p3beta1/videos:annotate:\x01*\xda\x41\x12input_uri,features\xca\x41.\n\x15\x41nnotateVideoResponse\x12\x15\x41nnotateVideoProgress\x1aT\xca\x41 videointelligence.googleapis.com\xd2\x41.https://www.googleapis.com/auth/cloud-platform2\xad\x02\n!StreamingVideoIntelligenceService\x12\xb1\x01\n\x16StreamingAnnotateVideo\x12G.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest\x1aH.google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoResponse"\x00(\x01\x30\x01\x1aT\xca\x41 videointelligence.googleapis.com\xd2\x41.https://www.googleapis.com/auth/cloud-platformB\x80\x02\n,com.google.cloud.videointelligence.v1p3beta1B\x1dVideoIntelligenceServiceProtoP\x01ZYgoogle.golang.org/genproto/googleapis/cloud/videointelligence/v1p3beta1;videointelligence\xaa\x02(Google.Cloud.VideoIntelligence.V1P3Beta1\xca\x02(Google\\Cloud\\VideoIntelligence\\V1p3beta1b\x06proto3',
     dependencies=[
         google_dot_api_dot_annotations__pb2.DESCRIPTOR,
@@ -46,6 +47,7 @@ _LABELDETECTIONMODE = _descriptor.EnumDescriptor(
     full_name="google.cloud.videointelligence.v1p3beta1.LabelDetectionMode",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="LABEL_DETECTION_MODE_UNSPECIFIED",
@@ -53,12 +55,23 @@ _LABELDETECTIONMODE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="SHOT_MODE", index=1, number=1, serialized_options=None, type=None
+            name="SHOT_MODE",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="FRAME_MODE", index=2, number=2, serialized_options=None, type=None
+            name="FRAME_MODE",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="SHOT_AND_FRAME_MODE",
@@ -66,6 +79,7 @@ _LABELDETECTIONMODE = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -81,6 +95,7 @@ _LIKELIHOOD = _descriptor.EnumDescriptor(
     full_name="google.cloud.videointelligence.v1p3beta1.Likelihood",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="LIKELIHOOD_UNSPECIFIED",
@@ -88,21 +103,47 @@ _LIKELIHOOD = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="VERY_UNLIKELY", index=1, number=1, serialized_options=None, type=None
+            name="VERY_UNLIKELY",
+            index=1,
+            number=1,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="UNLIKELY", index=2, number=2, serialized_options=None, type=None
+            name="UNLIKELY",
+            index=2,
+            number=2,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="POSSIBLE", index=3, number=3, serialized_options=None, type=None
+            name="POSSIBLE",
+            index=3,
+            number=3,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="LIKELY", index=4, number=4, serialized_options=None, type=None
+            name="LIKELY",
+            index=4,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="VERY_LIKELY", index=5, number=5, serialized_options=None, type=None
+            name="VERY_LIKELY",
+            index=5,
+            number=5,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -118,6 +159,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
     full_name="google.cloud.videointelligence.v1p3beta1.StreamingFeature",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="STREAMING_FEATURE_UNSPECIFIED",
@@ -125,6 +167,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_LABEL_DETECTION",
@@ -132,6 +175,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_SHOT_CHANGE_DETECTION",
@@ -139,6 +183,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=2,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_EXPLICIT_CONTENT_DETECTION",
@@ -146,6 +191,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_OBJECT_TRACKING",
@@ -153,6 +199,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=4,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_AUTOML_ACTION_RECOGNITION",
@@ -160,6 +207,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=23,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_AUTOML_CLASSIFICATION",
@@ -167,6 +215,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=21,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="STREAMING_AUTOML_OBJECT_TRACKING",
@@ -174,6 +223,7 @@ _STREAMINGFEATURE = _descriptor.EnumDescriptor(
             number=22,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -189,6 +239,7 @@ _FEATURE = _descriptor.EnumDescriptor(
     full_name="google.cloud.videointelligence.v1p3beta1.Feature",
     filename=None,
     file=DESCRIPTOR,
+    create_key=_descriptor._internal_create_key,
     values=[
         _descriptor.EnumValueDescriptor(
             name="FEATURE_UNSPECIFIED",
@@ -196,6 +247,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=0,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="LABEL_DETECTION",
@@ -203,6 +255,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=1,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="SHOT_CHANGE_DETECTION",
@@ -210,6 +263,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=2,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="EXPLICIT_CONTENT_DETECTION",
@@ -217,9 +271,15 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=3,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="FACE_DETECTION", index=4, number=4, serialized_options=None, type=None
+            name="FACE_DETECTION",
+            index=4,
+            number=4,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="SPEECH_TRANSCRIPTION",
@@ -227,9 +287,15 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=6,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
-            name="TEXT_DETECTION", index=6, number=7, serialized_options=None, type=None
+            name="TEXT_DETECTION",
+            index=6,
+            number=7,
+            serialized_options=None,
+            type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="OBJECT_TRACKING",
@@ -237,6 +303,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=9,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="LOGO_RECOGNITION",
@@ -244,6 +311,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=12,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="CELEBRITY_RECOGNITION",
@@ -251,6 +319,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=13,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.EnumValueDescriptor(
             name="PERSON_DETECTION",
@@ -258,6 +327,7 @@ _FEATURE = _descriptor.EnumDescriptor(
             number=14,
             serialized_options=None,
             type=None,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     containing_type=None,
@@ -305,6 +375,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="input_uri",
@@ -323,6 +394,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="input_content",
@@ -341,6 +413,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="features",
@@ -359,6 +432,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="video_context",
@@ -377,6 +451,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="output_uri",
@@ -395,6 +470,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="location_id",
@@ -413,6 +489,7 @@ _ANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -434,6 +511,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="segments",
@@ -452,6 +530,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="label_detection_config",
@@ -470,6 +549,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="shot_change_detection_config",
@@ -488,6 +568,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="explicit_content_detection_config",
@@ -506,6 +587,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="face_detection_config",
@@ -524,6 +606,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="speech_transcription_config",
@@ -542,6 +625,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="text_detection_config",
@@ -560,6 +644,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="person_detection_config",
@@ -578,6 +663,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="object_tracking_config",
@@ -596,6 +682,7 @@ _VIDEOCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -617,6 +704,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="label_detection_mode",
@@ -635,6 +723,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="stationary_camera",
@@ -653,6 +742,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="model",
@@ -671,6 +761,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="frame_confidence_threshold",
@@ -689,6 +780,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="video_confidence_threshold",
@@ -707,6 +799,7 @@ _LABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -728,6 +821,7 @@ _SHOTCHANGEDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model",
@@ -746,6 +840,7 @@ _SHOTCHANGEDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -767,6 +862,7 @@ _OBJECTTRACKINGCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model",
@@ -785,6 +881,7 @@ _OBJECTTRACKINGCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -806,6 +903,7 @@ _EXPLICITCONTENTDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model",
@@ -824,6 +922,7 @@ _EXPLICITCONTENTDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -845,6 +944,7 @@ _FACEDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model",
@@ -863,6 +963,7 @@ _FACEDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="include_bounding_boxes",
@@ -881,6 +982,7 @@ _FACEDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="include_attributes",
@@ -899,6 +1001,7 @@ _FACEDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -920,6 +1023,7 @@ _PERSONDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="include_bounding_boxes",
@@ -938,6 +1042,7 @@ _PERSONDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="include_pose_landmarks",
@@ -956,6 +1061,7 @@ _PERSONDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="include_attributes",
@@ -974,6 +1080,7 @@ _PERSONDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -995,6 +1102,7 @@ _TEXTDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="language_hints",
@@ -1013,6 +1121,7 @@ _TEXTDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="model",
@@ -1031,6 +1140,7 @@ _TEXTDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1052,6 +1162,7 @@ _VIDEOSEGMENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="start_time_offset",
@@ -1070,6 +1181,7 @@ _VIDEOSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="end_time_offset",
@@ -1088,6 +1200,7 @@ _VIDEOSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1109,6 +1222,7 @@ _LABELSEGMENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="segment",
@@ -1127,6 +1241,7 @@ _LABELSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -1145,6 +1260,7 @@ _LABELSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1166,6 +1282,7 @@ _LABELFRAME = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="time_offset",
@@ -1184,6 +1301,7 @@ _LABELFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -1202,6 +1320,7 @@ _LABELFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1223,6 +1342,7 @@ _ENTITY = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="entity_id",
@@ -1241,6 +1361,7 @@ _ENTITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="description",
@@ -1259,6 +1380,7 @@ _ENTITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="language_code",
@@ -1277,6 +1399,7 @@ _ENTITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1298,6 +1421,7 @@ _LABELANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="entity",
@@ -1316,6 +1440,7 @@ _LABELANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="category_entities",
@@ -1334,6 +1459,7 @@ _LABELANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segments",
@@ -1352,6 +1478,7 @@ _LABELANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="frames",
@@ -1370,6 +1497,7 @@ _LABELANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1391,6 +1519,7 @@ _EXPLICITCONTENTFRAME = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="time_offset",
@@ -1409,6 +1538,7 @@ _EXPLICITCONTENTFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="pornography_likelihood",
@@ -1427,6 +1557,7 @@ _EXPLICITCONTENTFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1448,6 +1579,7 @@ _EXPLICITCONTENTANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="frames",
@@ -1466,6 +1598,7 @@ _EXPLICITCONTENTANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -1487,6 +1620,7 @@ _NORMALIZEDBOUNDINGBOX = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="left",
@@ -1505,6 +1639,7 @@ _NORMALIZEDBOUNDINGBOX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="top",
@@ -1523,6 +1658,7 @@ _NORMALIZEDBOUNDINGBOX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="right",
@@ -1541,6 +1677,7 @@ _NORMALIZEDBOUNDINGBOX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="bottom",
@@ -1559,6 +1696,7 @@ _NORMALIZEDBOUNDINGBOX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1580,6 +1718,7 @@ _TIMESTAMPEDOBJECT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="normalized_bounding_box",
@@ -1598,6 +1737,7 @@ _TIMESTAMPEDOBJECT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="time_offset",
@@ -1616,6 +1756,7 @@ _TIMESTAMPEDOBJECT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="attributes",
@@ -1634,6 +1775,7 @@ _TIMESTAMPEDOBJECT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="landmarks",
@@ -1652,6 +1794,7 @@ _TIMESTAMPEDOBJECT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1673,6 +1816,7 @@ _TRACK = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="segment",
@@ -1691,6 +1835,7 @@ _TRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="timestamped_objects",
@@ -1709,6 +1854,7 @@ _TRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="attributes",
@@ -1727,6 +1873,7 @@ _TRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -1745,6 +1892,7 @@ _TRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1766,6 +1914,7 @@ _DETECTEDATTRIBUTE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1784,6 +1933,7 @@ _DETECTEDATTRIBUTE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -1802,6 +1952,7 @@ _DETECTEDATTRIBUTE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="value",
@@ -1820,6 +1971,7 @@ _DETECTEDATTRIBUTE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1841,6 +1993,7 @@ _CELEBRITY = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -1859,6 +2012,7 @@ _CELEBRITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="display_name",
@@ -1877,6 +2031,7 @@ _CELEBRITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="description",
@@ -1895,6 +2050,7 @@ _CELEBRITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1916,6 +2072,7 @@ _CELEBRITYTRACK_RECOGNIZEDCELEBRITY = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="celebrity",
@@ -1934,6 +2091,7 @@ _CELEBRITYTRACK_RECOGNIZEDCELEBRITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -1952,6 +2110,7 @@ _CELEBRITYTRACK_RECOGNIZEDCELEBRITY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -1972,6 +2131,7 @@ _CELEBRITYTRACK = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="celebrities",
@@ -1990,6 +2150,7 @@ _CELEBRITYTRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="face_track",
@@ -2008,6 +2169,7 @@ _CELEBRITYTRACK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2029,6 +2191,7 @@ _CELEBRITYRECOGNITIONANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="celebrity_tracks",
@@ -2047,6 +2210,7 @@ _CELEBRITYRECOGNITIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2068,6 +2232,7 @@ _DETECTEDLANDMARK = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="name",
@@ -2086,6 +2251,7 @@ _DETECTEDLANDMARK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="point",
@@ -2104,6 +2270,7 @@ _DETECTEDLANDMARK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -2122,6 +2289,7 @@ _DETECTEDLANDMARK = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2143,6 +2311,7 @@ _FACEDETECTIONANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="tracks",
@@ -2161,6 +2330,7 @@ _FACEDETECTIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="thumbnail",
@@ -2179,6 +2349,7 @@ _FACEDETECTIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2200,6 +2371,7 @@ _PERSONDETECTIONANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="tracks",
@@ -2218,6 +2390,7 @@ _PERSONDETECTIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2239,6 +2412,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="input_uri",
@@ -2257,6 +2431,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segment",
@@ -2275,6 +2450,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segment_label_annotations",
@@ -2293,6 +2469,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segment_presence_label_annotations",
@@ -2311,6 +2488,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="shot_label_annotations",
@@ -2329,6 +2507,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="shot_presence_label_annotations",
@@ -2347,6 +2526,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="frame_label_annotations",
@@ -2365,6 +2545,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="face_detection_annotations",
@@ -2383,6 +2564,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="shot_annotations",
@@ -2401,6 +2583,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="explicit_annotation",
@@ -2419,6 +2602,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="speech_transcriptions",
@@ -2437,6 +2621,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="text_annotations",
@@ -2455,6 +2640,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="object_annotations",
@@ -2473,6 +2659,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="logo_recognition_annotations",
@@ -2491,6 +2678,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="person_detection_annotations",
@@ -2509,6 +2697,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="celebrity_recognition_annotations",
@@ -2527,6 +2716,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="error",
@@ -2545,6 +2735,7 @@ _VIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2566,6 +2757,7 @@ _ANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="annotation_results",
@@ -2584,6 +2776,7 @@ _ANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2605,6 +2798,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="input_uri",
@@ -2623,6 +2817,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="progress_percent",
@@ -2641,6 +2836,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="start_time",
@@ -2659,6 +2855,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="update_time",
@@ -2677,6 +2874,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="feature",
@@ -2695,6 +2893,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segment",
@@ -2713,6 +2912,7 @@ _VIDEOANNOTATIONPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2734,6 +2934,7 @@ _ANNOTATEVIDEOPROGRESS = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="annotation_progress",
@@ -2752,6 +2953,7 @@ _ANNOTATEVIDEOPROGRESS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2773,6 +2975,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="language_code",
@@ -2791,6 +2994,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\002",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="max_alternatives",
@@ -2809,6 +3013,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="filter_profanity",
@@ -2827,6 +3032,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="speech_contexts",
@@ -2845,6 +3051,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="enable_automatic_punctuation",
@@ -2863,6 +3070,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="audio_tracks",
@@ -2881,6 +3089,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="enable_speaker_diarization",
@@ -2899,6 +3108,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="diarization_speaker_count",
@@ -2917,6 +3127,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="enable_word_confidence",
@@ -2935,6 +3146,7 @@ _SPEECHTRANSCRIPTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -2956,6 +3168,7 @@ _SPEECHCONTEXT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="phrases",
@@ -2974,6 +3187,7 @@ _SPEECHCONTEXT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\001",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -2995,6 +3209,7 @@ _SPEECHTRANSCRIPTION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="alternatives",
@@ -3013,6 +3228,7 @@ _SPEECHTRANSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="language_code",
@@ -3031,6 +3247,7 @@ _SPEECHTRANSCRIPTION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3052,6 +3269,7 @@ _SPEECHRECOGNITIONALTERNATIVE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="transcript",
@@ -3070,6 +3288,7 @@ _SPEECHRECOGNITIONALTERNATIVE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -3088,6 +3307,7 @@ _SPEECHRECOGNITIONALTERNATIVE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="words",
@@ -3106,6 +3326,7 @@ _SPEECHRECOGNITIONALTERNATIVE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3127,6 +3348,7 @@ _WORDINFO = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="start_time",
@@ -3145,6 +3367,7 @@ _WORDINFO = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="end_time",
@@ -3163,6 +3386,7 @@ _WORDINFO = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="word",
@@ -3181,6 +3405,7 @@ _WORDINFO = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -3199,6 +3424,7 @@ _WORDINFO = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="speaker_tag",
@@ -3217,6 +3443,7 @@ _WORDINFO = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=b"\340A\003",
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3238,6 +3465,7 @@ _NORMALIZEDVERTEX = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="x",
@@ -3256,6 +3484,7 @@ _NORMALIZEDVERTEX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="y",
@@ -3274,6 +3503,7 @@ _NORMALIZEDVERTEX = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3295,6 +3525,7 @@ _NORMALIZEDBOUNDINGPOLY = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="vertices",
@@ -3313,6 +3544,7 @@ _NORMALIZEDBOUNDINGPOLY = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -3334,6 +3566,7 @@ _TEXTSEGMENT = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="segment",
@@ -3352,6 +3585,7 @@ _TEXTSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -3370,6 +3604,7 @@ _TEXTSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="frames",
@@ -3388,6 +3623,7 @@ _TEXTSEGMENT = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3409,6 +3645,7 @@ _TEXTFRAME = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="rotated_bounding_box",
@@ -3427,6 +3664,7 @@ _TEXTFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="time_offset",
@@ -3445,6 +3683,7 @@ _TEXTFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3466,6 +3705,7 @@ _TEXTANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="text",
@@ -3484,6 +3724,7 @@ _TEXTANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segments",
@@ -3502,6 +3743,7 @@ _TEXTANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3523,6 +3765,7 @@ _OBJECTTRACKINGFRAME = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="normalized_bounding_box",
@@ -3541,6 +3784,7 @@ _OBJECTTRACKINGFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="time_offset",
@@ -3559,6 +3803,7 @@ _OBJECTTRACKINGFRAME = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3580,6 +3825,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="segment",
@@ -3598,6 +3844,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="track_id",
@@ -3616,6 +3863,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="entity",
@@ -3634,6 +3882,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="confidence",
@@ -3652,6 +3901,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="frames",
@@ -3670,6 +3920,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3685,6 +3936,7 @@ _OBJECTTRACKINGANNOTATION = _descriptor.Descriptor(
             full_name="google.cloud.videointelligence.v1p3beta1.ObjectTrackingAnnotation.track_info",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -3699,6 +3951,7 @@ _LOGORECOGNITIONANNOTATION = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="entity",
@@ -3717,6 +3970,7 @@ _LOGORECOGNITIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="tracks",
@@ -3735,6 +3989,7 @@ _LOGORECOGNITIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="segments",
@@ -3753,6 +4008,7 @@ _LOGORECOGNITIONANNOTATION = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3774,6 +4030,7 @@ _STREAMINGANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="video_config",
@@ -3792,6 +4049,7 @@ _STREAMINGANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="input_content",
@@ -3810,6 +4068,7 @@ _STREAMINGANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -3825,6 +4084,7 @@ _STREAMINGANNOTATEVIDEOREQUEST = _descriptor.Descriptor(
             full_name="google.cloud.videointelligence.v1p3beta1.StreamingAnnotateVideoRequest.streaming_request",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -3839,6 +4099,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="shot_change_detection_config",
@@ -3857,6 +4118,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="label_detection_config",
@@ -3875,6 +4137,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="explicit_content_detection_config",
@@ -3893,6 +4156,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="object_tracking_config",
@@ -3911,6 +4175,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="automl_action_recognition_config",
@@ -3929,6 +4194,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="automl_classification_config",
@@ -3947,6 +4213,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="automl_object_tracking_config",
@@ -3965,6 +4232,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="feature",
@@ -3983,6 +4251,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="storage_config",
@@ -4001,6 +4270,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -4016,6 +4286,7 @@ _STREAMINGVIDEOCONFIG = _descriptor.Descriptor(
             full_name="google.cloud.videointelligence.v1p3beta1.StreamingVideoConfig.streaming_config",
             index=0,
             containing_type=None,
+            create_key=_descriptor._internal_create_key,
             fields=[],
         )
     ],
@@ -4030,6 +4301,7 @@ _STREAMINGANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="error",
@@ -4048,6 +4320,7 @@ _STREAMINGANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="annotation_results",
@@ -4066,6 +4339,7 @@ _STREAMINGANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="annotation_results_uri",
@@ -4084,6 +4358,7 @@ _STREAMINGANNOTATEVIDEORESPONSE = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -4105,6 +4380,7 @@ _STREAMINGVIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="shot_annotations",
@@ -4123,6 +4399,7 @@ _STREAMINGVIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="label_annotations",
@@ -4141,6 +4418,7 @@ _STREAMINGVIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="explicit_annotation",
@@ -4159,6 +4437,7 @@ _STREAMINGVIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="object_annotations",
@@ -4177,6 +4456,7 @@ _STREAMINGVIDEOANNOTATIONRESULTS = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -4198,6 +4478,7 @@ _STREAMINGSHOTCHANGEDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[],
     extensions=[],
     nested_types=[],
@@ -4218,6 +4499,7 @@ _STREAMINGLABELDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="stationary_camera",
@@ -4236,6 +4518,7 @@ _STREAMINGLABELDETECTIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -4257,6 +4540,7 @@ _STREAMINGEXPLICITCONTENTDETECTIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[],
     extensions=[],
     nested_types=[],
@@ -4277,6 +4561,7 @@ _STREAMINGOBJECTTRACKINGCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[],
     extensions=[],
     nested_types=[],
@@ -4297,6 +4582,7 @@ _STREAMINGAUTOMLACTIONRECOGNITIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model_name",
@@ -4315,6 +4601,7 @@ _STREAMINGAUTOMLACTIONRECOGNITIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -4336,6 +4623,7 @@ _STREAMINGAUTOMLCLASSIFICATIONCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model_name",
@@ -4354,6 +4642,7 @@ _STREAMINGAUTOMLCLASSIFICATIONCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -4375,6 +4664,7 @@ _STREAMINGAUTOMLOBJECTTRACKINGCONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="model_name",
@@ -4393,6 +4683,7 @@ _STREAMINGAUTOMLOBJECTTRACKINGCONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         )
     ],
     extensions=[],
@@ -4414,6 +4705,7 @@ _STREAMINGSTORAGECONFIG = _descriptor.Descriptor(
     filename=None,
     file=DESCRIPTOR,
     containing_type=None,
+    create_key=_descriptor._internal_create_key,
     fields=[
         _descriptor.FieldDescriptor(
             name="enable_storage_annotation_result",
@@ -4432,6 +4724,7 @@ _STREAMINGSTORAGECONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
         _descriptor.FieldDescriptor(
             name="annotation_result_storage_directory",
@@ -4450,6 +4743,7 @@ _STREAMINGSTORAGECONFIG = _descriptor.Descriptor(
             extension_scope=None,
             serialized_options=None,
             file=DESCRIPTOR,
+            create_key=_descriptor._internal_create_key,
         ),
     ],
     extensions=[],
@@ -6259,6 +6553,7 @@ _VIDEOINTELLIGENCESERVICE = _descriptor.ServiceDescriptor(
     file=DESCRIPTOR,
     index=0,
     serialized_options=b"\312A videointelligence.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platform",
+    create_key=_descriptor._internal_create_key,
     serialized_start=12068,
     serialized_end=12402,
     methods=[
@@ -6270,6 +6565,7 @@ _VIDEOINTELLIGENCESERVICE = _descriptor.ServiceDescriptor(
             input_type=_ANNOTATEVIDEOREQUEST,
             output_type=google_dot_longrunning_dot_operations__pb2._OPERATION,
             serialized_options=b'\202\323\344\223\002\037"\032/v1p3beta1/videos:annotate:\001*\332A\022input_uri,features\312A.\n\025AnnotateVideoResponse\022\025AnnotateVideoProgress',
+            create_key=_descriptor._internal_create_key,
         )
     ],
 )
@@ -6284,6 +6580,7 @@ _STREAMINGVIDEOINTELLIGENCESERVICE = _descriptor.ServiceDescriptor(
     file=DESCRIPTOR,
     index=1,
     serialized_options=b"\312A videointelligence.googleapis.com\322A.https://www.googleapis.com/auth/cloud-platform",
+    create_key=_descriptor._internal_create_key,
     serialized_start=12405,
     serialized_end=12706,
     methods=[
@@ -6295,6 +6592,7 @@ _STREAMINGVIDEOINTELLIGENCESERVICE = _descriptor.ServiceDescriptor(
             input_type=_STREAMINGANNOTATEVIDEOREQUEST,
             output_type=_STREAMINGANNOTATEVIDEORESPONSE,
             serialized_options=None,
+            create_key=_descriptor._internal_create_key,
         )
     ],
 )
