@@ -5937,9 +5937,9 @@ TextFrame = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _TEXTFRAME,
         "__module__": "google.cloud.videointelligence_v1p3beta1.proto.video_intelligence_pb2",
-        "__doc__": """Video frame level annotation results for text annotation (OCR). Contains
-  information regarding timestamp and bounding box locations for the
-  frames containing detected OCR text snippets.
+        "__doc__": """Video frame level annotation results for text annotation
+  (OCR). Contains information regarding timestamp and bounding box
+  locations for the frames containing detected OCR text snippets.
   
   
   Attributes:
@@ -6109,8 +6109,8 @@ StreamingVideoConfig = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _STREAMINGVIDEOCONFIG,
         "__module__": "google.cloud.videointelligence_v1p3beta1.proto.video_intelligence_pb2",
-        "__doc__": """Provides information to the annotator that specifies how
-  to process the request.
+        "__doc__": """Provides information to the annotator that specifies how to process the
+  request.
   
   
   Attributes:
