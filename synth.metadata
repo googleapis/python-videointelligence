@@ -3,23 +3,23 @@
     {
       "git": {
         "name": ".",
-        "remote": "https://github.com/googleapis/python-videointelligence.git",
-        "sha": "ce1e7defb7597f5afd3eb22b23259407382e5faa"
+        "remote": "git@github.com:googleapis/python-videointelligence.git",
+        "sha": "2033698ea81962ac9ff7c44c479fe3ae2d90fdd3"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "eafa840ceec23b44a5c21670288107c661252711",
-        "internalRef": "313488995"
+        "sha": "148a3caa5f6735c49d57bb4c8001a276fcfad588",
+        "internalRef": "315516848"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "4e1d2cb79b02d7496b1452f91c518630c207145e"
+        "sha": "88645a8f6e1b1c90fed625158960ffec565b023a"
       }
     }
   ],
