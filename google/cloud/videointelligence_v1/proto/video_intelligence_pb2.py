@@ -3831,6 +3831,7 @@ AnnotateVideoRequest = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video annotation request.
 
+  
   Attributes:
       input_uri:
           Input video location. Currently, only `Google Cloud Storage
@@ -3881,6 +3882,7 @@ VideoContext = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video context and/or feature-specific parameters.
 
+  
   Attributes:
       segments:
           Video segments to annotate. The segments may overlap and are
@@ -3914,6 +3916,7 @@ LabelDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for LABEL_DETECTION.
 
+  
   Attributes:
       label_detection_mode:
           What labels should be detected with LABEL_DETECTION, in
@@ -3957,6 +3960,7 @@ ShotChangeDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for SHOT_CHANGE_DETECTION.
 
+  
   Attributes:
       model:
           Model to use for shot change detection. Supported values:
@@ -3975,6 +3979,7 @@ ObjectTrackingConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for OBJECT_TRACKING.
 
+  
   Attributes:
       model:
           Model to use for object tracking. Supported values:
@@ -3993,6 +3998,7 @@ FaceDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for FACE_DETECTION.
 
+  
   Attributes:
       model:
           Model to use for face detection. Supported values:
@@ -4014,6 +4020,7 @@ ExplicitContentDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for EXPLICIT_CONTENT_DETECTION.
 
+  
   Attributes:
       model:
           Model to use for explicit content detection. Supported values:
@@ -4032,6 +4039,7 @@ TextDetectionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for TEXT_DETECTION.
 
+  
   Attributes:
       language_hints:
           Language hint can be specified if the language to be detected
@@ -4056,6 +4064,7 @@ VideoSegment = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video segment.
 
+  
   Attributes:
       start_time_offset:
           Time-offset, relative to the beginning of the video,
@@ -4077,6 +4086,7 @@ LabelSegment = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video segment level annotation results for label detection.
 
+  
   Attributes:
       segment:
           Video segment where a label was detected.
@@ -4096,6 +4106,7 @@ LabelFrame = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video frame level annotation results for label detection.
 
+  
   Attributes:
       time_offset:
           Time-offset, relative to the beginning of the video,
@@ -4116,6 +4127,7 @@ Entity = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Detected entity from video analysis.
 
+  
   Attributes:
       entity_id:
           Opaque entity ID. Some IDs may be available in `Google
@@ -4139,6 +4151,7 @@ LabelAnnotation = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Label annotation.
 
+  
   Attributes:
       entity:
           Detected entity.
@@ -4165,6 +4178,7 @@ ExplicitContentFrame = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video frame level annotation results for explicit content.
 
+  
   Attributes:
       time_offset:
           Time-offset, relative to the beginning of the video,
@@ -4187,6 +4201,7 @@ ExplicitContentAnnotation = _reflection.GeneratedProtocolMessageType(
   If no explicit content has been detected in a frame, no annotations
   are present for that frame.
 
+  
   Attributes:
       frames:
           All video frames where explicit content was detected.
@@ -4205,6 +4220,7 @@ NormalizedBoundingBox = _reflection.GeneratedProtocolMessageType(
         "__doc__": """Normalized bounding box. The normalized vertex coordinates are
   relative to the original image. Range: [0, 1].
 
+  
   Attributes:
       left:
           Left X coordinate.
@@ -4228,6 +4244,7 @@ FaceSegment = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video segment level annotation results for face detection.
 
+  
   Attributes:
       segment:
           Video segment where a face was detected.
@@ -4245,6 +4262,7 @@ FaceFrame = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video frame level annotation results for face detection.
 
+  
   Attributes:
       normalized_bounding_boxes:
           Normalized Bounding boxes in a frame. There can be more than
@@ -4267,6 +4285,7 @@ FaceAnnotation = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Face annotation.
 
+  
   Attributes:
       thumbnail:
           Thumbnail of a representative face view (in JPEG format).
@@ -4289,6 +4308,7 @@ TimestampedObject = _reflection.GeneratedProtocolMessageType(
         "__doc__": """For tracking related features. An object at time_offset with
   attributes, and located with normalized_bounding_box.
 
+  
   Attributes:
       normalized_bounding_box:
           Normalized Bounding box in a frame, where the object is
@@ -4314,6 +4334,7 @@ Track = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """A track of an object instance.
 
+  
   Attributes:
       segment:
           Video segment of a track.
@@ -4338,6 +4359,7 @@ DetectedAttribute = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """A generic detected attribute represented by name in string format.
 
+  
   Attributes:
       name:
           The name of the attribute, i.e. glasses, dark_glasses,
@@ -4363,6 +4385,7 @@ DetectedLandmark = _reflection.GeneratedProtocolMessageType(
         "__doc__": """A generic detected landmark represented by name in string format and a
   2D location.
 
+  
   Attributes:
       name:
           The name of this landmark, i.e. left_hand, right_shoulder.
@@ -4386,6 +4409,7 @@ VideoAnnotationResults = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Annotation results for a single video.
 
+  
   Attributes:
       input_uri:
           Video file location in `Google Cloud Storage
@@ -4457,6 +4481,7 @@ AnnotateVideoResponse = _reflection.GeneratedProtocolMessageType(
   ``Operation`` returned by the ``GetOperation`` call of the
   ``google::longrunning::Operations`` service.
 
+  
   Attributes:
       annotation_results:
           Annotation results for all videos specified in
@@ -4475,6 +4500,7 @@ VideoAnnotationProgress = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Annotation progress for a single video.
 
+  
   Attributes:
       input_uri:
           Video file location in `Google Cloud Storage
@@ -4508,6 +4534,7 @@ AnnotateVideoProgress = _reflection.GeneratedProtocolMessageType(
   ``Operation`` returned by the ``GetOperation`` call of the
   ``google::longrunning::Operations`` service.
 
+  
   Attributes:
       annotation_progress:
           Progress metadata for all videos specified in
@@ -4526,6 +4553,7 @@ SpeechTranscriptionConfig = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Config for SPEECH_TRANSCRIPTION.
 
+  
   Attributes:
       language_code:
           Required. *Required* The language of the supplied audio as a
@@ -4596,6 +4624,7 @@ SpeechContext = _reflection.GeneratedProtocolMessageType(
         "__doc__": """Provides “hints” to the speech recognizer to favor specific words and
   phrases in the results.
 
+  
   Attributes:
       phrases:
           Optional. A list of strings containing words and phrases
@@ -4620,6 +4649,7 @@ SpeechTranscription = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """A speech recognition result corresponding to a portion of the audio.
 
+  
   Attributes:
       alternatives:
           May contain one or more recognition hypotheses (up to the
@@ -4646,6 +4676,7 @@ SpeechRecognitionAlternative = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Alternative hypotheses (a.k.a. n-best list).
 
+  
   Attributes:
       transcript:
           Transcript text representing the words that the user spoke.
@@ -4678,6 +4709,7 @@ WordInfo = _reflection.GeneratedProtocolMessageType(
   only included in the response when certain request parameters are set,
   such as ``enable_word_time_offsets``.
 
+  
   Attributes:
       start_time:
           Time offset relative to the beginning of the audio, and
@@ -4721,6 +4753,7 @@ NormalizedVertex = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """X coordinate.
 
+  
   Attributes:
       y:
           Y coordinate.
@@ -4745,6 +4778,7 @@ NormalizedBoundingPoly = _reflection.GeneratedProtocolMessageType(
   3). Note that values can be less than 0, or greater than 1 due to
   trignometric calculations for location of the box.
 
+  
   Attributes:
       vertices:
           Normalized vertices of the bounding polygon.
@@ -4762,6 +4796,7 @@ TextSegment = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Video segment level annotation results for text detection.
 
+  
   Attributes:
       segment:
           Video segment where a text snippet was detected.
@@ -4787,6 +4822,7 @@ TextFrame = _reflection.GeneratedProtocolMessageType(
   Contains information regarding timestamp and bounding box locations
   for the frames containing detected OCR text snippets.
 
+  
   Attributes:
       rotated_bounding_box:
           Bounding polygon of the detected text for this frame.
@@ -4808,6 +4844,7 @@ TextAnnotation = _reflection.GeneratedProtocolMessageType(
   contain the corresponding text, confidence value, and frame level
   information for each detection.
 
+  
   Attributes:
       text:
           The detected text.
@@ -4828,6 +4865,7 @@ ObjectTrackingFrame = _reflection.GeneratedProtocolMessageType(
         "__doc__": """Video frame level annotations for object detection and tracking. This
   field stores per frame location, time offset, and confidence.
 
+  
   Attributes:
       normalized_bounding_box:
           The normalized bounding box location of this object track for
@@ -4848,6 +4886,7 @@ ObjectTrackingAnnotation = _reflection.GeneratedProtocolMessageType(
         "__module__": "google.cloud.videointelligence_v1.proto.video_intelligence_pb2",
         "__doc__": """Annotations corresponding to one tracked object.
 
+  
   Attributes:
       track_info:
           Different representation of tracking info in non-streaming
@@ -4888,6 +4927,7 @@ LogoRecognitionAnnotation = _reflection.GeneratedProtocolMessageType(
         "__doc__": """Annotation corresponding to one detected, tracked and recognized logo
   class.
 
+  
   Attributes:
       entity:
           Entity category information to specify the logo class that all
