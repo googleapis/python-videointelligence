@@ -1,7 +1,7 @@
 Python Client for Google Cloud Video Intelligence
 =================================================
 
-|beta| |pypi| |versions| 
+|ga| |pypi| |versions| 
 
 `Google Cloud Video Intelligence`_ API makes videos searchable, and
 discoverable, by extracting metadata with an easy to use API.
