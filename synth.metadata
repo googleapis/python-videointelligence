@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/python-videointelligence.git",
-        "sha": "e9388452b9a953f1f297b78ee19bcab9204132f7"
+        "sha": "afadf5a0ba4819ee3e86b765ae47eb4b1df942cf"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "148a3caa5f6735c49d57bb4c8001a276fcfad588",
-        "internalRef": "315516848"
+        "sha": "184661793fbe3b89f2b485c303e7466cef9d21a1",
+        "internalRef": "316182409"
       }
     },
     {
