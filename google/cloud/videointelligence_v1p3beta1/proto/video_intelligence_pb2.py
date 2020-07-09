@@ -6386,8 +6386,8 @@ StreamingAnnotateVideoResponse = _reflection.GeneratedProtocolMessageType(
     {
         "DESCRIPTOR": _STREAMINGANNOTATEVIDEORESPONSE,
         "__module__": "google.cloud.videointelligence_v1p3beta1.proto.video_intelligence_pb2",
-        "__doc__": """\ ``StreamingAnnotateVideoResponse`` is the only message returned to
-  the client by ``StreamingAnnotateVideo``. A series of zero or more
+        "__doc__": """``StreamingAnnotateVideoResponse`` is the only message returned to the
+  client by ``StreamingAnnotateVideo``. A series of zero or more
   ``StreamingAnnotateVideoResponse`` messages are streamed back to the
   client.
 
