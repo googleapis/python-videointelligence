@@ -4,6 +4,18 @@
 
 [1]: https://pypi.org/project/google-cloud-videointelligence/#history
 
+### [1.15.1](https://www.github.com/googleapis/python-videointelligence/compare/v1.15.0...v1.15.1) (2020-09-24)
+
+
+### Bug Fixes
+
+* **python:** change autodoc_default_flags to autodoc_default_options ([#37](https://www.github.com/googleapis/python-videointelligence/issues/37)) ([e938845](https://www.github.com/googleapis/python-videointelligence/commit/e9388452b9a953f1f297b78ee19bcab9204132f7))
+
+
+### Documentation
+
+* corrects release badge and link ([#36](https://www.github.com/googleapis/python-videointelligence/issues/36)) ([20ad69c](https://www.github.com/googleapis/python-videointelligence/commit/20ad69cefb473565d5065e4b118398c675cd5f79))
+
 ## [1.15.0](https://www.github.com/googleapis/python-videointelligence/compare/v1.14.0...v1.15.0) (2020-06-09)
 
 
