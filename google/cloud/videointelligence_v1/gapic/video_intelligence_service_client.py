@@ -42,7 +42,7 @@ from google.longrunning import operations_pb2
 
 
 _GAPIC_LIBRARY_VERSION = pkg_resources.get_distribution(
-    "google-cloud-videointelligence"
+    "google-cloud-videointelligence",
 ).version
 
 
@@ -163,12 +163,12 @@ class VideoIntelligenceServiceClient(object):
                 self.transport = transport
         else:
             self.transport = video_intelligence_service_grpc_transport.VideoIntelligenceServiceGrpcTransport(
-                address=api_endpoint, channel=channel, credentials=credentials
+                address=api_endpoint, channel=channel, credentials=credentials,
             )
 
         if client_info is None:
             client_info = google.api_core.gapic_v1.client_info.ClientInfo(
-                gapic_version=_GAPIC_LIBRARY_VERSION
+                gapic_version=_GAPIC_LIBRARY_VERSION,
             )
         else:
             client_info.gapic_version = _GAPIC_LIBRARY_VERSION
@@ -179,7 +179,7 @@ class VideoIntelligenceServiceClient(object):
         # (Ordinarily, these are the defaults specified in the `*_config.py`
         # file next to this one.)
         self._method_configs = google.api_core.gapic_v1.config.parse_method_configs(
-            client_config["interfaces"][self._INTERFACE_NAME]
+            client_config["interfaces"][self._INTERFACE_NAME],
         )
 
         # Save a dictionary of cached API call functions.
@@ -232,30 +232,31 @@ class VideoIntelligenceServiceClient(object):
             >>> metadata = response.metadata()
 
         Args:
+            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
             input_uri (str): Input video location. Currently, only `Google Cloud
                 Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
                 must be specified in the following format: ``gs://bucket-id/object-id``
                 (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
                 more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/reference-uris>`__. A video
-                URI may include wildcards in ``object-id``, and thus identify multiple
-                videos. Supported wildcards: '\*' to match 0 or more characters; '?' to
-                match 1 character. If unset, the input video should be embedded in the
-                request as ``input_content``. If set, ``input_content`` should be unset.
-            input_content (bytes): The video data bytes. If unset, the input video(s) should be specified
-                via ``input_uri``. If set, ``input_uri`` should be unset.
-            features (list[~google.cloud.videointelligence_v1.types.Feature]): Required. Requested video annotation features.
+                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__. A
+                video URI may include wildcards in ``object-id``, and thus identify
+                multiple videos. Supported wildcards: '*' to match 0 or more characters;
+                '?' to match 1 character. If unset, the input video should be embedded
+                in the request as ``input_content``. If set, ``input_content`` should be
+                unset.
+            input_content (bytes): The video data bytes. If unset, the input video(s) should be
+                specified via ``input_uri``. If set, ``input_uri`` should be unset.
             video_context (Union[dict, ~google.cloud.videointelligence_v1.types.VideoContext]): Additional video context and/or feature-specific parameters.
 
                 If a dict is provided, it must be of the same form as the protobuf
                 message :class:`~google.cloud.videointelligence_v1.types.VideoContext`
-            output_uri (str): Optional. Location where the output (in JSON format) should be stored.
-                Currently, only `Google Cloud
+            output_uri (str): Optional. Location where the output (in JSON format) should be
+                stored. Currently, only `Google Cloud
                 Storage <https://cloud.google.com/storage/>`__ URIs are supported, which
                 must be specified in the following format: ``gs://bucket-id/object-id``
                 (other URI formats return ``google.rpc.Code.INVALID_ARGUMENT``). For
                 more information, see `Request
-                URIs <https://cloud.google.com/storage/docs/reference-uris>`__.
+                URIs <https://cloud.google.com/storage/docs/request-endpoints>`__.
             location_id (str): Optional. Cloud region where annotation should take place. Supported
                 cloud regions: ``us-east1``, ``us-west1``, ``europe-west1``,
                 ``asia-east1``. If no region is specified, a region will be determined

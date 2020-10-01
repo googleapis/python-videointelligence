@@ -1,33 +1,32 @@
 {
-  "updateTime": "2020-02-14T23:28:20.105798Z",
   "sources": [
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/python-videointelligence.git",
-        "sha": "4eeaab856387d71afc921a41270f067f069fa190"
-      }
-    },
-    {
-      "generator": {
-        "name": "artman",
-        "version": "0.45.0",
-        "dockerImage": "googleapis/artman@sha256:6aec9c34db0e4be221cdaf6faba27bdc07cfea846808b3d3b964dfce3a9a0f9b"
+        "remote": "git@github.com:danoscarmike/python-videointelligence",
+        "sha": "7613d6b7734f439dcd1e300202d6af2fd1b88514"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "ee4dddf805072004ab19ac94df2ce669046eec26",
-        "internalRef": "295238095"
+        "sha": "a7eff611370b2c17050eee9da1c168bc156e3e91",
+        "internalRef": "334188571"
       }
     },
     {
-      "template": {
-        "name": "python_split_library",
-        "origin": "synthtool.gcp",
-        "version": "2020.2.4"
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "da29da32b3a988457b49ae290112b74f14b713cc"
+      }
+    },
+    {
+      "git": {
+        "name": "synthtool",
+        "remote": "https://github.com/googleapis/synthtool.git",
+        "sha": "da29da32b3a988457b49ae290112b74f14b713cc"
       }
     }
   ],
@@ -38,8 +37,7 @@
         "apiName": "videointelligence",
         "apiVersion": "v1beta2",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/videointelligence/artman_videointelligence_v1beta2.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -48,8 +46,7 @@
         "apiName": "videointelligence",
         "apiVersion": "v1p1beta1",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/videointelligence/artman_videointelligence_v1p1beta1.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -58,8 +55,7 @@
         "apiName": "videointelligence",
         "apiVersion": "v1p2beta1",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/videointelligence/artman_videointelligence_v1p2beta1.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -68,8 +64,7 @@
         "apiName": "videointelligence",
         "apiVersion": "v1p3beta1",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/videointelligence/artman_videointelligence_v1p3beta1.yaml"
+        "generator": "bazel"
       }
     },
     {
@@ -78,8 +73,7 @@
         "apiName": "videointelligence",
         "apiVersion": "v1",
         "language": "python",
-        "generator": "gapic",
-        "config": "google/cloud/videointelligence/artman_videointelligence_v1.yaml"
+        "generator": "bazel"
       }
     }
   ]

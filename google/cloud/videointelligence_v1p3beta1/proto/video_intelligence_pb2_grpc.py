@@ -10,7 +10,7 @@ from google.longrunning import (
 
 
 class VideoIntelligenceServiceStub(object):
-    """Service that implements Google Cloud Video Intelligence API.
+    """Service that implements the Video Intelligence API.
   """
 
     def __init__(self, channel):
@@ -27,7 +27,7 @@ class VideoIntelligenceServiceStub(object):
 
 
 class VideoIntelligenceServiceServicer(object):
-    """Service that implements Google Cloud Video Intelligence API.
+    """Service that implements the Video Intelligence API.
   """
 
     def AnnotateVideo(self, request, context):
@@ -47,7 +47,7 @@ def add_VideoIntelligenceServiceServicer_to_server(servicer, server):
             servicer.AnnotateVideo,
             request_deserializer=google_dot_cloud_dot_videointelligence__v1p3beta1_dot_proto_dot_video__intelligence__pb2.AnnotateVideoRequest.FromString,
             response_serializer=google_dot_longrunning_dot_operations__pb2.Operation.SerializeToString,
-        )
+        ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
         "google.cloud.videointelligence.v1p3beta1.VideoIntelligenceService",
@@ -57,7 +57,7 @@ def add_VideoIntelligenceServiceServicer_to_server(servicer, server):
 
 
 class StreamingVideoIntelligenceServiceStub(object):
-    """Service that implements streaming Google Cloud Video Intelligence API.
+    """Service that implements streaming Video Intelligence API.
   """
 
     def __init__(self, channel):
@@ -74,7 +74,7 @@ class StreamingVideoIntelligenceServiceStub(object):
 
 
 class StreamingVideoIntelligenceServiceServicer(object):
-    """Service that implements streaming Google Cloud Video Intelligence API.
+    """Service that implements streaming Video Intelligence API.
   """
 
     def StreamingAnnotateVideo(self, request_iterator, context):
@@ -93,7 +93,7 @@ def add_StreamingVideoIntelligenceServiceServicer_to_server(servicer, server):
             servicer.StreamingAnnotateVideo,
             request_deserializer=google_dot_cloud_dot_videointelligence__v1p3beta1_dot_proto_dot_video__intelligence__pb2.StreamingAnnotateVideoRequest.FromString,
             response_serializer=google_dot_cloud_dot_videointelligence__v1p3beta1_dot_proto_dot_video__intelligence__pb2.StreamingAnnotateVideoResponse.SerializeToString,
-        )
+        ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
         "google.cloud.videointelligence.v1p3beta1.StreamingVideoIntelligenceService",
