@@ -151,10 +151,10 @@ def docs(session):
     session.install("-e", ".")
     session.install("sphinx<3.0.0", "alabaster", "recommonmark")
 
+
     shutil.rmtree(os.path.join("docs", "_build"), ignore_errors=True)
     session.run(
         "sphinx-build",
-        "-W",  # warnings as errors
         "-T",  # show full traceback on exception
         "-N",  # no colors
         "-b",
