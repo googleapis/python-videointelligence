@@ -13,15 +13,6 @@
 * video speech transcription [([#1849](https://www.github.com/googleapis/python-videointelligence/issues/1849))](https://github.com/GoogleCloudPlatform/python-docs-samples/issues/1849) ([0bb8156](https://www.github.com/googleapis/python-videointelligence/commit/0bb8156ddda4fde4bbdda5f48d21fbbc34a2b0e8))
 
 
-### Bug Fixes
-
-* changes a positional to named arg [([#4092](https://www.github.com/googleapis/python-videointelligence/issues/4092))](https://github.com/GoogleCloudPlatform/python-docs-samples/issues/4092) ([67410fe](https://www.github.com/googleapis/python-videointelligence/commit/67410fe330b6d079096360694203b9beae8f1a91))
-* changes positional to named pararameters in Video samples [([#4017](https://www.github.com/googleapis/python-videointelligence/issues/4017))](https://github.com/GoogleCloudPlatform/python-docs-samples/issues/4017) ([3e0cd6c](https://www.github.com/googleapis/python-videointelligence/commit/3e0cd6cf383c667cea964818629a45f54a37ca8a))
-* removes reference to 'facial hair' from video face samples [([#4052](https://www.github.com/googleapis/python-videointelligence/issues/4052))](https://github.com/GoogleCloudPlatform/python-docs-samples/issues/4052) ([8ff5f1a](https://www.github.com/googleapis/python-videointelligence/commit/8ff5f1ae669a2cd4aec8f6538b5c8566c3a34282))
-* wait up to 20 seconds for blob to appear [([#3061](https://www.github.com/googleapis/python-videointelligence/issues/3061))](https://github.com/GoogleCloudPlatform/python-docs-samples/issues/3061) ([c98cabd](https://www.github.com/googleapis/python-videointelligence/commit/c98cabdaa1407be6e49516e5eb23efadc6e6404c))
-* **python:** change autodoc_default_flags to autodoc_default_options ([#37](https://www.github.com/googleapis/python-videointelligence/issues/37)) ([e938845](https://www.github.com/googleapis/python-videointelligence/commit/e9388452b9a953f1f297b78ee19bcab9204132f7))
-
-
 ### Documentation
 
 * corrects release badge and link ([#36](https://www.github.com/googleapis/python-videointelligence/issues/36)) ([20ad69c](https://www.github.com/googleapis/python-videointelligence/commit/20ad69cefb473565d5065e4b118398c675cd5f79))
