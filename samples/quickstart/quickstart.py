@@ -39,10 +39,10 @@ def run_quickstart():
     # first result is retrieved because a single video was processed
     segment_labels = result.annotation_results[0].segment_label_annotations
     for i, segment_label in enumerate(segment_labels):
-        print('Video label description: {}'.format(
+        print(f'Video label description: {segment_label.entity.description}'
             segment_label.entity.description))
         for category_entity in segment_label.category_entities:
-            print('\tLabel category description: {}'.format(
+            print(f'\tLabel category description: {category_entity.description}'
                 category_entity.description))
 
         for i, segment in enumerate(segment_label.segments):
@@ -50,10 +50,10 @@ def run_quickstart():
                           segment.segment.start_time_offset.nanos / 1e9)
             end_time = (segment.segment.end_time_offset.seconds +
                         segment.segment.end_time_offset.nanos / 1e9)
-            positions = '{}s to {}s'.format(start_time, end_time)
+            positions = f'{start_time}s to {end_time}s'
             confidence = segment.confidence
-            print('\tSegment {}: {}'.format(i, positions))
-            print('\tConfidence: {}'.format(confidence))
+            print(f'\tSegment {i}: {positions}')
+            print(f'\tConfidence: {confidence}')
         print('\n')
     # [END video_quickstart]
 
