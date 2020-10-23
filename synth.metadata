@@ -3,8 +3,8 @@
     {
       "git": {
         "name": ".",
-        "remote": "git@github.com:googleapis/python-videointelligence.git",
-        "sha": "4691390f7bc6829d0bfcd1ed8e110202c03f8586"
+        "remote": "https://github.com/googleapis/python-videointelligence.git",
+        "sha": "2d3b73496f1a50122b7a9bfbfa1d5e13bb2e06ff"
       }
     },
     {
@@ -213,6 +213,8 @@
     "samples/CONTRIBUTING.md",
     "samples/analyze/README.rst",
     "samples/analyze/noxfile.py",
+    "samples/labels/README.rst",
+    "samples/labels/noxfile.py",
     "scripts/decrypt-secrets.sh",
     "scripts/readme-gen/readme_gen.py",
     "scripts/readme-gen/templates/README.tmpl.rst",
