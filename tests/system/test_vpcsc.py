@@ -26,8 +26,7 @@ from test_utils.vpcsc_config import vpcsc_config
 CLOUD_PLATFORM_SCOPE = "https://www.googleapis.com/auth/cloud-platform"
 CREDENTIALS_FILE = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
 API_ENDPOINT_URL = "https://videointelligence.googleapis.com/v1/videos:annotate"
-BUCKET_INSIDE = os.environ.get(
-    "GOOGLE_CLOUD_TESTS_VPCSC_INSIDE_PERIMETER_BUCKET")
+BUCKET_INSIDE = os.environ.get("GOOGLE_CLOUD_TESTS_VPCSC_INSIDE_PERIMETER_BUCKET")
 
 
 @pytest.fixture(scope="module")
