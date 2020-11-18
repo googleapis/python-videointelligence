@@ -4,46 +4,29 @@
       "git": {
         "name": ".",
         "remote": "git@github.com:googleapis/python-videointelligence.git",
-<<<<<<< HEAD
-        "sha": "7a8da9f8dca6ac2c0af59558f97eb4a7114398a9"
-=======
         "sha": "8ecf08ee0310d149f83c6496b7fa78f603122d8a"
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-<<<<<<< HEAD
-        "sha": "3738209d5e12f97b208213bd66359bf4c9d12245",
-        "internalRef": "334908430"
-=======
         "sha": "6a69c750c3f01a69017662395f90515bbf1fe1ff",
         "internalRef": "342721036"
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-<<<<<<< HEAD
-        "sha": "0762e8ee2ec21cdfc4d82020b985a104feb0453b"
-=======
         "sha": "d5fc0bcf9ea9789c5b0e3154a9e3b29e5cea6116"
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-<<<<<<< HEAD
-        "sha": "0762e8ee2ec21cdfc4d82020b985a104feb0453b"
-=======
         "sha": "d5fc0bcf9ea9789c5b0e3154a9e3b29e5cea6116"
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
       }
     }
   ],

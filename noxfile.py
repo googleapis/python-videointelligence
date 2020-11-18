@@ -156,11 +156,7 @@ def docs(session):
     """Build the docs for this library."""
 
     session.install("-e", ".")
-<<<<<<< HEAD
-    session.install("sphinx<3.0.0", "alabaster", "recommonmark")
-=======
     session.install("sphinx<=3.0.0", "alabaster", "recommonmark")
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
 
     shutil.rmtree(os.path.join("docs", "_build"), ignore_errors=True)
     session.run(
