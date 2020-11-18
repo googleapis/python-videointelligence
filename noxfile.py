@@ -40,9 +40,7 @@ def lint(session):
     """
     session.install("flake8", BLACK_VERSION)
     session.run(
-        "black",
-        "--check",
-        *BLACK_PATHS,
+        "black", "--check", *BLACK_PATHS,
     )
     session.run("flake8", "google", "tests")
 
@@ -59,8 +57,7 @@ def blacken(session):
     """
     session.install(BLACK_VERSION)
     session.run(
-        "black",
-        *BLACK_PATHS,
+        "black", *BLACK_PATHS,
     )
 
 
@@ -125,9 +122,7 @@ def system(session):
     # Install all test dependencies, then install this package into the
     # virtualenv's dist-packages.
     session.install(
-        "mock",
-        "pytest",
-        "google-cloud-testutils",
+        "mock", "pytest", "google-cloud-testutils",
     )
     session.install("-e", ".")
 
@@ -156,11 +151,7 @@ def docs(session):
     """Build the docs for this library."""
 
     session.install("-e", ".")
-<<<<<<< HEAD
-    session.install("sphinx<3.0.0", "alabaster", "recommonmark")
-=======
     session.install("sphinx<=3.0.0", "alabaster", "recommonmark")
->>>>>>> 3541deb2ce117e136170e7118d70ca918790af01
 
     shutil.rmtree(os.path.join("docs", "_build"), ignore_errors=True)
     session.run(
