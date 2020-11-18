@@ -39,10 +39,6 @@ TEST_CONFIG = {
     # You can opt out from the test for specific Python versions.
     'ignored_versions': ["2.7"],
 
-    # Old samples are opted out of enforcing Python type hints
-    # All new samples should feature them
-    'enforce_type_hints': False,
-
     # An envvar key for determining the project id to use. Change it
     # to 'BUILD_SPECIFIC_GCLOUD_PROJECT' if you want to opt in using a
     # build specific Cloud project. You can also use your own string
@@ -136,10 +132,7 @@ FLAKE8_COMMON_ARGS = [
 
 @nox.session
 def lint(session):
-    if not TEST_CONFIG['enforce_type_hints']:
-        session.install("flake8", "flake8-import-order")
-    else:
-        session.install("flake8", "flake8-import-order", "flake8-annotations")
+    session.install("flake8", "flake8-import-order")
 
     local_names = _determine_local_import_names(".")
     args = FLAKE8_COMMON_ARGS + [
@@ -148,17 +141,7 @@ def lint(session):
         "."
     ]
     session.run("flake8", *args)
-#
-# Black
-#
 
-
-@nox.session
-def blacken(session):
-    session.install("black")
-    python_files = [path for path in os.listdir(".") if path.endswith(".py")]
-
-    session.run("black", *python_files)
 
 #
 # Sample Tests
@@ -217,11 +200,6 @@ def _get_repo_root():
         if p is None:
             break
         if Path(p / ".git").exists():
-            return str(p)
-        # .git is not available in repos cloned via Cloud Build
-        # setup.py is always in the library's root, so use that instead
-        # https://github.com/googleapis/synthtool/issues/792
-        if Path(p / "setup.py").exists():
             return str(p)
         p = p.parent
     raise Exception("Unable to detect repository root.")
