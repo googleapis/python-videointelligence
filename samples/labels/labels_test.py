@@ -1,4 +1,6 @@
-# Copyright 2020 Google LLC
+#!/usr/bin/env python
+
+# Copyright 2017 Google, Inc
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,21 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
-
 import pytest
 
-import video_detect_faces_gcs_beta
-
-RESOURCES = os.path.join(os.path.dirname(__file__), "resources")
+import labels
 
 
-@pytest.mark.flaky(max_runs=3, min_passes=1)
-def test_detect_faces(capsys):
-    input_uri = "gs://cloud-samples-data/video/googlework_short.mp4"
-
-    video_detect_faces_gcs_beta.detect_faces(gcs_uri=input_uri)
-
+@pytest.mark.slow
+def test_feline_video_labels(capsys):
+    labels.analyze_labels('gs://cloud-samples-data/video/cat.mp4')
     out, _ = capsys.readouterr()
-
-    assert "Face detected:" in out
+    assert 'Video label description: cat' in out
