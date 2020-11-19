@@ -49,6 +49,7 @@ def analyze_shots(path):
     # [START video_shot_tutorial_check_operation]
     result = operation.result(timeout=120)
     print("\nFinished processing.")
+
     # [END video_shot_tutorial_check_operation]
 
     # [START video_shot_tutorial_parse_response]
