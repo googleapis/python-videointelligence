@@ -30,13 +30,7 @@ version = "1.16.0"
 release_status = "Development Status :: 5 - Production/Stable"
 dependencies = ["google-api-core[grpc] >= 1.14.0, < 2.0.0dev", "proto-plus >= 1.10.0"]
 extras = {"libcst": "libcst >= 0.2.5"}
-scripts = [
-    "scripts/fixup_videointelligence_v1_keywords.py",
-    "scripts/fixup_videointelligence_v1beta2_keywords.py",
-    "scripts/fixup_videointelligence_v1p1beta1_keywords.py",
-    "scripts/fixup_videointelligence_v1p2beta1_keywords.py",
-    "scripts/fixup_videointelligence_v1p3beta1_keywords.py",
-]
+scripts = ["scripts/fixup_keywords.py"]
 
 
 # Setup boilerplate below this line.
