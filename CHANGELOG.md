@@ -9,7 +9,7 @@
 
 ### ⚠ BREAKING CHANGES
 
-* use microgenerator (#76)
+* use microgenerator. See [Migration Guide](https://pypi.org/project/google-cloud-logging/2.0.0/). (#76)
 
 ### Features
 
