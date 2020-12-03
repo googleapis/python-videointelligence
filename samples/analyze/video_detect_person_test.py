@@ -25,7 +25,7 @@ RESOURCES = os.path.join(os.path.dirname(__file__), "resources")
 def test_detect_person(capsys):
     local_file_path = os.path.join(RESOURCES, "googlework_tiny.mp4")
 
-    video_detect_person_beta.detect_person(local_file_path=local_file_path)
+    video_detect_person.detect_person(local_file_path=local_file_path)
 
     out, _ = capsys.readouterr()
 

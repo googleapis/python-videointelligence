@@ -25,7 +25,7 @@ RESOURCES = os.path.join(os.path.dirname(__file__), "resources")
 def test_detect_person(capsys):
     input_uri = "gs://cloud-samples-data/video/googlework_tiny.mp4"
 
-    video_detect_person_gcs_beta.detect_person(gcs_uri=input_uri)
+    video_detect_person_gcs.detect_person(gcs_uri=input_uri)
 
     out, _ = capsys.readouterr()
 
