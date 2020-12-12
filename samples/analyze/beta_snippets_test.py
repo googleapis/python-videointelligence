@@ -71,6 +71,7 @@ def bucket():
 
 
 @pytest.mark.slow
+@pytest.mark.flaky(max_runs=3, min_passes=1)
 def test_speech_transcription(capsys):
     beta_snippets.speech_transcription(
         "gs://python-docs-samples-tests/video/googlework_short.mp4"
