@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/python-videointelligence.git",
-        "sha": "1a68219142ed23c434417808da9fcdca3812280d"
+        "sha": "e4bbbad245df46c226f51fac4d89f5b8bff64d15"
       }
     },
     {
