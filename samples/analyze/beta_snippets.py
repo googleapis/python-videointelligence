@@ -469,7 +469,7 @@ def detect_shot_change_streaming(path):
     # [END video_streaming_shot_change_detection_beta]
 
 
-def track_objects_streaming(path):
+def track_objects_streaming(path, timeout=600):
     # [START video_streaming_object_tracking_beta]
     from google.cloud import videointelligence_v1p3beta1 as videointelligence
 
@@ -510,7 +510,7 @@ def track_objects_streaming(path):
     # The default timeout is about 300 seconds.
     # To process longer videos it should be set to
     # larger than the length (in seconds) of the stream.
-    responses = client.streaming_annotate_video(requests, timeout=600)
+    responses = client.streaming_annotate_video(requests, timeout)
 
     # Each response corresponds to about 1 second of video.
     for response in responses:
