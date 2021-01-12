@@ -95,10 +95,11 @@ def test_detect_shot_change_streaming(capsys, video_path):
     assert "Shot" in out
 
 
+#Flaky ServiceUnavailable
 @pytest.mark.slow
 @pytest.mark.flaky(max_runs=3, min_passes=1)
 def test_track_objects_streaming(capsys, video_path):
-    beta_snippets.track_objects_streaming(video_path, timeout=900)
+    beta_snippets.track_objects_streaming(video_path)
 
     out, _ = capsys.readouterr()
     assert "cat" in out
