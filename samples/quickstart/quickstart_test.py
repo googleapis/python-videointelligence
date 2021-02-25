@@ -21,6 +21,6 @@ import quickstart
 
 @pytest.mark.slow
 def test_quickstart(capsys):
-    quickstart.run_quickstart()
+    quickstart.run_quickstart(180)
     out, _ = capsys.readouterr()
     assert "Video label description: cat" in out
