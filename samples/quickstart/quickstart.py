@@ -23,7 +23,7 @@ Usage:
 """
 
 
-def run_quickstart(timeout=120):
+def run_quickstart():
     # [START video_quickstart]
     from google.cloud import videointelligence
 
@@ -37,7 +37,7 @@ def run_quickstart(timeout=120):
     )
     print("\nProcessing video for label annotations:")
 
-    result = operation.result(timeout)
+    result = operation.result(timeout=180)
     print("\nFinished processing.")
 
     # first result is retrieved because a single video was processed
