@@ -73,7 +73,7 @@ def bucket():
 @pytest.mark.slow
 def test_speech_transcription(capsys):
     beta_snippets.speech_transcription(
-        "gs://python-docs-samples-tests/video/googlework_short.mp4"
+        "gs://python-docs-samples-tests/video/googlework_short.mp4", timeout=240
     )
     out, _ = capsys.readouterr()
     assert "cultural" in out
@@ -95,7 +95,9 @@ def test_detect_shot_change_streaming(capsys, video_path):
     assert "Shot" in out
 
 
+# Flaky ServiceUnavailable
 @pytest.mark.slow
+@pytest.mark.flaky(max_runs=3, min_passes=1)
 def test_track_objects_streaming(capsys, video_path):
     beta_snippets.track_objects_streaming(video_path)
 
@@ -149,7 +151,9 @@ def test_track_objects(capsys):
     assert "Entity id" in out
 
 
+# Flaky exceeding designed timeout
 @pytest.mark.slow
+@pytest.mark.flaky(max_runs=3, min_passes=1)
 def test_track_objects_gcs():
     in_file = "gs://cloud-samples-data/video/cat.mp4"
     object_annotations = beta_snippets.track_objects_gcs(in_file)
