@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "dd372aa22ded7a8ba6f0e03a80e06358a3fa0907",
-        "internalRef": "347055288"
+        "sha": "520682435235d9c503983a360a2090025aa47cd1",
+        "internalRef": "350246057"
       }
     },
     {
@@ -78,6 +78,7 @@
     }
   ],
   "generatedFiles": [
+    ".coveragerc",
     ".flake8",
     ".github/CONTRIBUTING.md",
     ".github/ISSUE_TEMPLATE/bug_report.md",
@@ -133,14 +134,20 @@
     "docs/multiprocessing.rst",
     "docs/videointelligence_v1/services.rst",
     "docs/videointelligence_v1/types.rst",
+    "docs/videointelligence_v1/video_intelligence_service.rst",
     "docs/videointelligence_v1beta2/services.rst",
     "docs/videointelligence_v1beta2/types.rst",
+    "docs/videointelligence_v1beta2/video_intelligence_service.rst",
     "docs/videointelligence_v1p1beta1/services.rst",
     "docs/videointelligence_v1p1beta1/types.rst",
+    "docs/videointelligence_v1p1beta1/video_intelligence_service.rst",
     "docs/videointelligence_v1p2beta1/services.rst",
     "docs/videointelligence_v1p2beta1/types.rst",
+    "docs/videointelligence_v1p2beta1/video_intelligence_service.rst",
     "docs/videointelligence_v1p3beta1/services.rst",
+    "docs/videointelligence_v1p3beta1/streaming_video_intelligence_service.rst",
     "docs/videointelligence_v1p3beta1/types.rst",
+    "docs/videointelligence_v1p3beta1/video_intelligence_service.rst",
     "google/cloud/videointelligence/__init__.py",
     "google/cloud/videointelligence/py.typed",
     "google/cloud/videointelligence_v1/__init__.py",

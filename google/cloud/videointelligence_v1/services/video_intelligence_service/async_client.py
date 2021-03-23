@@ -78,6 +78,7 @@ class VideoIntelligenceServiceAsyncClient:
         VideoIntelligenceServiceClient.parse_common_location_path
     )
 
+    from_service_account_info = VideoIntelligenceServiceClient.from_service_account_info
     from_service_account_file = VideoIntelligenceServiceClient.from_service_account_file
     from_service_account_json = from_service_account_file
 
@@ -160,7 +161,7 @@ class VideoIntelligenceServiceAsyncClient:
         contains ``AnnotateVideoResponse`` (results).
 
         Args:
-            request (:class:`~.video_intelligence.AnnotateVideoRequest`):
+            request (:class:`google.cloud.videointelligence_v1.types.AnnotateVideoRequest`):
                 The request object. Video annotation request.
             input_uri (:class:`str`):
                 Input video location. Currently, only `Cloud
@@ -177,12 +178,14 @@ class VideoIntelligenceServiceAsyncClient:
                 If unset, the input video should be embedded in the
                 request as ``input_content``. If set, ``input_content``
                 must be unset.
+
                 This corresponds to the ``input_uri`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            features (:class:`Sequence[~.video_intelligence.Feature]`):
+            features (:class:`Sequence[google.cloud.videointelligence_v1.types.Feature]`):
                 Required. Requested video annotation
                 features.
+
                 This corresponds to the ``features`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
@@ -194,15 +197,12 @@ class VideoIntelligenceServiceAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            ~.operation_async.AsyncOperation:
+            google.api_core.operation_async.AsyncOperation:
                 An object representing a long-running operation.
 
-                The result type for the operation will be
-                :class:``~.video_intelligence.AnnotateVideoResponse``:
-                Video annotation response. Included in the ``response``
-                field of the ``Operation`` returned by the
-                ``GetOperation`` call of the
-                ``google::longrunning::Operations`` service.
+                The result type for the operation will be :class:`google.cloud.videointelligence_v1.types.AnnotateVideoResponse` Video annotation response. Included in the response
+                   field of the Operation returned by the GetOperation
+                   call of the google::longrunning::Operations service.
 
         """
         # Create or coerce a protobuf request object.
