@@ -95,9 +95,6 @@ class StreamingVideoIntelligenceServiceAsyncClient:
         StreamingVideoIntelligenceServiceClient.parse_common_location_path
     )
 
-    from_service_account_info = (
-        StreamingVideoIntelligenceServiceClient.from_service_account_info
-    )
     from_service_account_file = (
         StreamingVideoIntelligenceServiceClient.from_service_account_file
     )
@@ -183,7 +180,7 @@ class StreamingVideoIntelligenceServiceAsyncClient:
         (not REST).
 
         Args:
-            requests (AsyncIterator[`google.cloud.videointelligence_v1p3beta1.types.StreamingAnnotateVideoRequest`]):
+            requests (AsyncIterator[`~.video_intelligence.StreamingAnnotateVideoRequest`]):
                 The request object AsyncIterator. The top-level message sent by the
                 client for the `StreamingAnnotateVideo` method. Multiple
                 `StreamingAnnotateVideoRequest` messages are sent. The
@@ -197,11 +194,12 @@ class StreamingVideoIntelligenceServiceAsyncClient:
                 sent along with the request as metadata.
 
         Returns:
-            AsyncIterable[google.cloud.videointelligence_v1p3beta1.types.StreamingAnnotateVideoResponse]:
-                StreamingAnnotateVideoResponse is the only message returned to the client
-                   by StreamingAnnotateVideo. A series of zero or more
-                   StreamingAnnotateVideoResponse messages are streamed
-                   back to the client.
+            AsyncIterable[~.video_intelligence.StreamingAnnotateVideoResponse]:
+                ``StreamingAnnotateVideoResponse`` is the only message
+                returned to the client by ``StreamingAnnotateVideo``. A
+                series of zero or more
+                ``StreamingAnnotateVideoResponse`` messages are streamed
+                back to the client.
 
         """
 

@@ -103,10 +103,10 @@ class AnnotateVideoRequest(proto.Message):
             The video data bytes. If unset, the input video(s) should be
             specified via ``input_uri``. If set, ``input_uri`` should be
             unset.
-        features (Sequence[google.cloud.videointelligence_v1p1beta1.types.Feature]):
+        features (Sequence[~.video_intelligence.Feature]):
             Required. Requested video annotation
             features.
-        video_context (google.cloud.videointelligence_v1p1beta1.types.VideoContext):
+        video_context (~.video_intelligence.VideoContext):
             Additional video context and/or feature-
             pecific parameters.
         output_uri (str):
@@ -142,18 +142,18 @@ class VideoContext(proto.Message):
     r"""Video context and/or feature-specific parameters.
 
     Attributes:
-        segments (Sequence[google.cloud.videointelligence_v1p1beta1.types.VideoSegment]):
+        segments (Sequence[~.video_intelligence.VideoSegment]):
             Video segments to annotate. The segments may
             overlap and are not required to be contiguous or
             span the whole video. If unspecified, each video
             is treated as a single segment.
-        label_detection_config (google.cloud.videointelligence_v1p1beta1.types.LabelDetectionConfig):
+        label_detection_config (~.video_intelligence.LabelDetectionConfig):
             Config for LABEL_DETECTION.
-        shot_change_detection_config (google.cloud.videointelligence_v1p1beta1.types.ShotChangeDetectionConfig):
+        shot_change_detection_config (~.video_intelligence.ShotChangeDetectionConfig):
             Config for SHOT_CHANGE_DETECTION.
-        explicit_content_detection_config (google.cloud.videointelligence_v1p1beta1.types.ExplicitContentDetectionConfig):
+        explicit_content_detection_config (~.video_intelligence.ExplicitContentDetectionConfig):
             Config for EXPLICIT_CONTENT_DETECTION.
-        speech_transcription_config (google.cloud.videointelligence_v1p1beta1.types.SpeechTranscriptionConfig):
+        speech_transcription_config (~.video_intelligence.SpeechTranscriptionConfig):
             Config for SPEECH_TRANSCRIPTION.
     """
 
@@ -180,7 +180,7 @@ class LabelDetectionConfig(proto.Message):
     r"""Config for LABEL_DETECTION.
 
     Attributes:
-        label_detection_mode (google.cloud.videointelligence_v1p1beta1.types.LabelDetectionMode):
+        label_detection_mode (~.video_intelligence.LabelDetectionMode):
             What labels should be detected with LABEL_DETECTION, in
             addition to video-level labels or segment-level labels. If
             unspecified, defaults to ``SHOT_MODE``.
@@ -232,11 +232,11 @@ class VideoSegment(proto.Message):
     r"""Video segment.
 
     Attributes:
-        start_time_offset (google.protobuf.duration_pb2.Duration):
+        start_time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the start of the segment
             (inclusive).
-        end_time_offset (google.protobuf.duration_pb2.Duration):
+        end_time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the end of the segment
             (inclusive).
@@ -251,7 +251,7 @@ class LabelSegment(proto.Message):
     r"""Video segment level annotation results for label detection.
 
     Attributes:
-        segment (google.cloud.videointelligence_v1p1beta1.types.VideoSegment):
+        segment (~.video_intelligence.VideoSegment):
             Video segment where a label was detected.
         confidence (float):
             Confidence that the label is accurate. Range: [0, 1].
@@ -266,7 +266,7 @@ class LabelFrame(proto.Message):
     r"""Video frame level annotation results for label detection.
 
     Attributes:
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the video frame for this
             location.
@@ -304,17 +304,17 @@ class LabelAnnotation(proto.Message):
     r"""Label annotation.
 
     Attributes:
-        entity (google.cloud.videointelligence_v1p1beta1.types.Entity):
+        entity (~.video_intelligence.Entity):
             Detected entity.
-        category_entities (Sequence[google.cloud.videointelligence_v1p1beta1.types.Entity]):
+        category_entities (Sequence[~.video_intelligence.Entity]):
             Common categories for the detected entity. E.g. when the
             label is ``Terrier`` the category is likely ``dog``. And in
             some cases there might be more than one categories e.g.
             ``Terrier`` could also be a ``pet``.
-        segments (Sequence[google.cloud.videointelligence_v1p1beta1.types.LabelSegment]):
+        segments (Sequence[~.video_intelligence.LabelSegment]):
             All video segments where a label was
             detected.
-        frames (Sequence[google.cloud.videointelligence_v1p1beta1.types.LabelFrame]):
+        frames (Sequence[~.video_intelligence.LabelFrame]):
             All video frames where a label was detected.
     """
 
@@ -331,11 +331,11 @@ class ExplicitContentFrame(proto.Message):
     r"""Video frame level annotation results for explicit content.
 
     Attributes:
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the video frame for this
             location.
-        pornography_likelihood (google.cloud.videointelligence_v1p1beta1.types.Likelihood):
+        pornography_likelihood (~.video_intelligence.Likelihood):
             Likelihood of the pornography content..
     """
 
@@ -350,7 +350,7 @@ class ExplicitContentAnnotation(proto.Message):
     frame, no annotations are present for that frame.
 
     Attributes:
-        frames (Sequence[google.cloud.videointelligence_v1p1beta1.types.ExplicitContentFrame]):
+        frames (Sequence[~.video_intelligence.ExplicitContentFrame]):
             All video frames where explicit content was
             detected.
     """
@@ -367,26 +367,26 @@ class VideoAnnotationResults(proto.Message):
         input_uri (str):
             Output only. Video file location in `Google Cloud
             Storage <https://cloud.google.com/storage/>`__.
-        segment_label_annotations (Sequence[google.cloud.videointelligence_v1p1beta1.types.LabelAnnotation]):
+        segment_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on video level or user
             specified segment level. There is exactly one
             element for each unique label.
-        shot_label_annotations (Sequence[google.cloud.videointelligence_v1p1beta1.types.LabelAnnotation]):
+        shot_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on shot level.
             There is exactly one element for each unique
             label.
-        frame_label_annotations (Sequence[google.cloud.videointelligence_v1p1beta1.types.LabelAnnotation]):
+        frame_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on frame level.
             There is exactly one element for each unique
             label.
-        shot_annotations (Sequence[google.cloud.videointelligence_v1p1beta1.types.VideoSegment]):
+        shot_annotations (Sequence[~.video_intelligence.VideoSegment]):
             Shot annotations. Each shot is represented as
             a video segment.
-        explicit_annotation (google.cloud.videointelligence_v1p1beta1.types.ExplicitContentAnnotation):
+        explicit_annotation (~.video_intelligence.ExplicitContentAnnotation):
             Explicit content annotation.
-        speech_transcriptions (Sequence[google.cloud.videointelligence_v1p1beta1.types.SpeechTranscription]):
+        speech_transcriptions (Sequence[~.video_intelligence.SpeechTranscription]):
             Speech transcription.
-        error (google.rpc.status_pb2.Status):
+        error (~.status.Status):
             Output only. If set, indicates an error. Note that for a
             single ``AnnotateVideoRequest`` some videos may succeed and
             some may fail.
@@ -427,7 +427,7 @@ class AnnotateVideoResponse(proto.Message):
     ``google::longrunning::Operations`` service.
 
     Attributes:
-        annotation_results (Sequence[google.cloud.videointelligence_v1p1beta1.types.VideoAnnotationResults]):
+        annotation_results (Sequence[~.video_intelligence.VideoAnnotationResults]):
             Annotation results for all videos specified in
             ``AnnotateVideoRequest``.
     """
@@ -448,10 +448,10 @@ class VideoAnnotationProgress(proto.Message):
             Output only. Approximate percentage processed
             thus far. Guaranteed to be 100 when fully
             processed.
-        start_time (google.protobuf.timestamp_pb2.Timestamp):
+        start_time (~.timestamp.Timestamp):
             Output only. Time when the request was
             received.
-        update_time (google.protobuf.timestamp_pb2.Timestamp):
+        update_time (~.timestamp.Timestamp):
             Output only. Time of the most recent update.
     """
 
@@ -470,7 +470,7 @@ class AnnotateVideoProgress(proto.Message):
     ``google::longrunning::Operations`` service.
 
     Attributes:
-        annotation_progress (Sequence[google.cloud.videointelligence_v1p1beta1.types.VideoAnnotationProgress]):
+        annotation_progress (Sequence[~.video_intelligence.VideoAnnotationProgress]):
             Progress metadata for all videos specified in
             ``AnnotateVideoRequest``.
     """
@@ -504,7 +504,7 @@ class SpeechTranscriptionConfig(proto.Message):
             character in each filtered word with asterisks, e.g. "f***".
             If set to ``false`` or omitted, profanities won't be
             filtered out.
-        speech_contexts (Sequence[google.cloud.videointelligence_v1p1beta1.types.SpeechContext]):
+        speech_contexts (Sequence[~.video_intelligence.SpeechContext]):
             Optional. A means to provide context to
             assist the speech recognition.
         enable_automatic_punctuation (bool):
@@ -563,7 +563,7 @@ class SpeechTranscription(proto.Message):
     audio.
 
     Attributes:
-        alternatives (Sequence[google.cloud.videointelligence_v1p1beta1.types.SpeechRecognitionAlternative]):
+        alternatives (Sequence[~.video_intelligence.SpeechRecognitionAlternative]):
             May contain one or more recognition hypotheses (up to the
             maximum specified in ``max_alternatives``). These
             alternatives are ordered in terms of accuracy, with the top
@@ -591,7 +591,7 @@ class SpeechRecognitionAlternative(proto.Message):
             accurate and users should not rely on it to be always
             provided. The default of 0.0 is a sentinel value indicating
             ``confidence`` was not set.
-        words (Sequence[google.cloud.videointelligence_v1p1beta1.types.WordInfo]):
+        words (Sequence[~.video_intelligence.WordInfo]):
             Output only. A list of word-specific
             information for each recognized word.
     """
@@ -609,13 +609,13 @@ class WordInfo(proto.Message):
     set, such as ``enable_word_time_offsets``.
 
     Attributes:
-        start_time (google.protobuf.duration_pb2.Duration):
+        start_time (~.duration.Duration):
             Output only. Time offset relative to the beginning of the
             audio, and corresponding to the start of the spoken word.
             This field is only set if ``enable_word_time_offsets=true``
             and only in the top hypothesis. This is an experimental
             feature and the accuracy of the time offset can vary.
-        end_time (google.protobuf.duration_pb2.Duration):
+        end_time (~.duration.Duration):
             Output only. Time offset relative to the beginning of the
             audio, and corresponding to the end of the spoken word. This
             field is only set if ``enable_word_time_offsets=true`` and

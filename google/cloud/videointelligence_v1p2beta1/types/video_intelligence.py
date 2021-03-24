@@ -108,10 +108,10 @@ class AnnotateVideoRequest(proto.Message):
             The video data bytes. If unset, the input video(s) should be
             specified via ``input_uri``. If set, ``input_uri`` should be
             unset.
-        features (Sequence[google.cloud.videointelligence_v1p2beta1.types.Feature]):
+        features (Sequence[~.video_intelligence.Feature]):
             Required. Requested video annotation
             features.
-        video_context (google.cloud.videointelligence_v1p2beta1.types.VideoContext):
+        video_context (~.video_intelligence.VideoContext):
             Additional video context and/or feature-
             pecific parameters.
         output_uri (str):
@@ -147,18 +147,18 @@ class VideoContext(proto.Message):
     r"""Video context and/or feature-specific parameters.
 
     Attributes:
-        segments (Sequence[google.cloud.videointelligence_v1p2beta1.types.VideoSegment]):
+        segments (Sequence[~.video_intelligence.VideoSegment]):
             Video segments to annotate. The segments may
             overlap and are not required to be contiguous or
             span the whole video. If unspecified, each video
             is treated as a single segment.
-        label_detection_config (google.cloud.videointelligence_v1p2beta1.types.LabelDetectionConfig):
+        label_detection_config (~.video_intelligence.LabelDetectionConfig):
             Config for LABEL_DETECTION.
-        shot_change_detection_config (google.cloud.videointelligence_v1p2beta1.types.ShotChangeDetectionConfig):
+        shot_change_detection_config (~.video_intelligence.ShotChangeDetectionConfig):
             Config for SHOT_CHANGE_DETECTION.
-        explicit_content_detection_config (google.cloud.videointelligence_v1p2beta1.types.ExplicitContentDetectionConfig):
+        explicit_content_detection_config (~.video_intelligence.ExplicitContentDetectionConfig):
             Config for EXPLICIT_CONTENT_DETECTION.
-        text_detection_config (google.cloud.videointelligence_v1p2beta1.types.TextDetectionConfig):
+        text_detection_config (~.video_intelligence.TextDetectionConfig):
             Config for TEXT_DETECTION.
     """
 
@@ -185,7 +185,7 @@ class LabelDetectionConfig(proto.Message):
     r"""Config for LABEL_DETECTION.
 
     Attributes:
-        label_detection_mode (google.cloud.videointelligence_v1p2beta1.types.LabelDetectionMode):
+        label_detection_mode (~.video_intelligence.LabelDetectionMode):
             What labels should be detected with LABEL_DETECTION, in
             addition to video-level labels or segment-level labels. If
             unspecified, defaults to ``SHOT_MODE``.
@@ -255,11 +255,11 @@ class VideoSegment(proto.Message):
     r"""Video segment.
 
     Attributes:
-        start_time_offset (google.protobuf.duration_pb2.Duration):
+        start_time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the start of the segment
             (inclusive).
-        end_time_offset (google.protobuf.duration_pb2.Duration):
+        end_time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the end of the segment
             (inclusive).
@@ -274,7 +274,7 @@ class LabelSegment(proto.Message):
     r"""Video segment level annotation results for label detection.
 
     Attributes:
-        segment (google.cloud.videointelligence_v1p2beta1.types.VideoSegment):
+        segment (~.video_intelligence.VideoSegment):
             Video segment where a label was detected.
         confidence (float):
             Confidence that the label is accurate. Range: [0, 1].
@@ -289,7 +289,7 @@ class LabelFrame(proto.Message):
     r"""Video frame level annotation results for label detection.
 
     Attributes:
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the video frame for this
             location.
@@ -327,17 +327,17 @@ class LabelAnnotation(proto.Message):
     r"""Label annotation.
 
     Attributes:
-        entity (google.cloud.videointelligence_v1p2beta1.types.Entity):
+        entity (~.video_intelligence.Entity):
             Detected entity.
-        category_entities (Sequence[google.cloud.videointelligence_v1p2beta1.types.Entity]):
+        category_entities (Sequence[~.video_intelligence.Entity]):
             Common categories for the detected entity. E.g. when the
             label is ``Terrier`` the category is likely ``dog``. And in
             some cases there might be more than one categories e.g.
             ``Terrier`` could also be a ``pet``.
-        segments (Sequence[google.cloud.videointelligence_v1p2beta1.types.LabelSegment]):
+        segments (Sequence[~.video_intelligence.LabelSegment]):
             All video segments where a label was
             detected.
-        frames (Sequence[google.cloud.videointelligence_v1p2beta1.types.LabelFrame]):
+        frames (Sequence[~.video_intelligence.LabelFrame]):
             All video frames where a label was detected.
     """
 
@@ -354,11 +354,11 @@ class ExplicitContentFrame(proto.Message):
     r"""Video frame level annotation results for explicit content.
 
     Attributes:
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             Time-offset, relative to the beginning of the
             video, corresponding to the video frame for this
             location.
-        pornography_likelihood (google.cloud.videointelligence_v1p2beta1.types.Likelihood):
+        pornography_likelihood (~.video_intelligence.Likelihood):
             Likelihood of the pornography content..
     """
 
@@ -373,7 +373,7 @@ class ExplicitContentAnnotation(proto.Message):
     frame, no annotations are present for that frame.
 
     Attributes:
-        frames (Sequence[google.cloud.videointelligence_v1p2beta1.types.ExplicitContentFrame]):
+        frames (Sequence[~.video_intelligence.ExplicitContentFrame]):
             All video frames where explicit content was
             detected.
     """
@@ -414,32 +414,32 @@ class VideoAnnotationResults(proto.Message):
         input_uri (str):
             Video file location in `Google Cloud
             Storage <https://cloud.google.com/storage/>`__.
-        segment_label_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.LabelAnnotation]):
+        segment_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on video level or user
             specified segment level. There is exactly one
             element for each unique label.
-        shot_label_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.LabelAnnotation]):
+        shot_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on shot level.
             There is exactly one element for each unique
             label.
-        frame_label_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.LabelAnnotation]):
+        frame_label_annotations (Sequence[~.video_intelligence.LabelAnnotation]):
             Label annotations on frame level.
             There is exactly one element for each unique
             label.
-        shot_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.VideoSegment]):
+        shot_annotations (Sequence[~.video_intelligence.VideoSegment]):
             Shot annotations. Each shot is represented as
             a video segment.
-        explicit_annotation (google.cloud.videointelligence_v1p2beta1.types.ExplicitContentAnnotation):
+        explicit_annotation (~.video_intelligence.ExplicitContentAnnotation):
             Explicit content annotation.
-        text_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.TextAnnotation]):
+        text_annotations (Sequence[~.video_intelligence.TextAnnotation]):
             OCR text detection and tracking.
             Annotations for list of detected text snippets.
             Each will have list of frame information
             associated with it.
-        object_annotations (Sequence[google.cloud.videointelligence_v1p2beta1.types.ObjectTrackingAnnotation]):
+        object_annotations (Sequence[~.video_intelligence.ObjectTrackingAnnotation]):
             Annotations for list of objects detected and
             tracked in video.
-        error (google.rpc.status_pb2.Status):
+        error (~.status.Status):
             If set, indicates an error. Note that for a single
             ``AnnotateVideoRequest`` some videos may succeed and some
             may fail.
@@ -484,7 +484,7 @@ class AnnotateVideoResponse(proto.Message):
     ``google::longrunning::Operations`` service.
 
     Attributes:
-        annotation_results (Sequence[google.cloud.videointelligence_v1p2beta1.types.VideoAnnotationResults]):
+        annotation_results (Sequence[~.video_intelligence.VideoAnnotationResults]):
             Annotation results for all videos specified in
             ``AnnotateVideoRequest``.
     """
@@ -504,9 +504,9 @@ class VideoAnnotationProgress(proto.Message):
         progress_percent (int):
             Approximate percentage processed thus far.
             Guaranteed to be 100 when fully processed.
-        start_time (google.protobuf.timestamp_pb2.Timestamp):
+        start_time (~.timestamp.Timestamp):
             Time when the request was received.
-        update_time (google.protobuf.timestamp_pb2.Timestamp):
+        update_time (~.timestamp.Timestamp):
             Time of the most recent update.
     """
 
@@ -525,7 +525,7 @@ class AnnotateVideoProgress(proto.Message):
     ``google::longrunning::Operations`` service.
 
     Attributes:
-        annotation_progress (Sequence[google.cloud.videointelligence_v1p2beta1.types.VideoAnnotationProgress]):
+        annotation_progress (Sequence[~.video_intelligence.VideoAnnotationProgress]):
             Progress metadata for all videos specified in
             ``AnnotateVideoRequest``.
     """
@@ -567,7 +567,7 @@ class NormalizedBoundingPoly(proto.Message):
     calculations for location of the box.
 
     Attributes:
-        vertices (Sequence[google.cloud.videointelligence_v1p2beta1.types.NormalizedVertex]):
+        vertices (Sequence[~.video_intelligence.NormalizedVertex]):
             Normalized vertices of the bounding polygon.
     """
 
@@ -578,14 +578,14 @@ class TextSegment(proto.Message):
     r"""Video segment level annotation results for text detection.
 
     Attributes:
-        segment (google.cloud.videointelligence_v1p2beta1.types.VideoSegment):
+        segment (~.video_intelligence.VideoSegment):
             Video segment where a text snippet was
             detected.
         confidence (float):
             Confidence for the track of detected text. It
             is calculated as the highest over all frames
             where OCR detected text appears.
-        frames (Sequence[google.cloud.videointelligence_v1p2beta1.types.TextFrame]):
+        frames (Sequence[~.video_intelligence.TextFrame]):
             Information related to the frames where OCR
             detected text appears.
     """
@@ -603,10 +603,10 @@ class TextFrame(proto.Message):
     locations for the frames containing detected OCR text snippets.
 
     Attributes:
-        rotated_bounding_box (google.cloud.videointelligence_v1p2beta1.types.NormalizedBoundingPoly):
+        rotated_bounding_box (~.video_intelligence.NormalizedBoundingPoly):
             Bounding polygon of the detected text for
             this frame.
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             Timestamp of this frame.
     """
 
@@ -625,7 +625,7 @@ class TextAnnotation(proto.Message):
     Attributes:
         text (str):
             The detected text.
-        segments (Sequence[google.cloud.videointelligence_v1p2beta1.types.TextSegment]):
+        segments (Sequence[~.video_intelligence.TextSegment]):
             All video segments where OCR detected text
             appears.
     """
@@ -641,10 +641,10 @@ class ObjectTrackingFrame(proto.Message):
     confidence.
 
     Attributes:
-        normalized_bounding_box (google.cloud.videointelligence_v1p2beta1.types.NormalizedBoundingBox):
+        normalized_bounding_box (~.video_intelligence.NormalizedBoundingBox):
             The normalized bounding box location of this
             object track for the frame.
-        time_offset (google.protobuf.duration_pb2.Duration):
+        time_offset (~.duration.Duration):
             The timestamp of the frame in microseconds.
     """
 
@@ -659,16 +659,16 @@ class ObjectTrackingAnnotation(proto.Message):
     r"""Annotations corresponding to one tracked object.
 
     Attributes:
-        entity (google.cloud.videointelligence_v1p2beta1.types.Entity):
+        entity (~.video_intelligence.Entity):
             Entity to specify the object category that
             this track is labeled as.
         confidence (float):
             Object category's labeling confidence of this
             track.
-        frames (Sequence[google.cloud.videointelligence_v1p2beta1.types.ObjectTrackingFrame]):
+        frames (Sequence[~.video_intelligence.ObjectTrackingFrame]):
             Information corresponding to all frames where
             this object track appears.
-        segment (google.cloud.videointelligence_v1p2beta1.types.VideoSegment):
+        segment (~.video_intelligence.VideoSegment):
             Each object track corresponds to one video
             segment where it appears.
     """
