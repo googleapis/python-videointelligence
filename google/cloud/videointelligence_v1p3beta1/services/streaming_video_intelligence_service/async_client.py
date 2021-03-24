@@ -240,6 +240,7 @@ class StreamingVideoIntelligenceServiceAsyncClient:
                 predicate=retries.if_exception_type(
                     exceptions.DeadlineExceeded, exceptions.ServiceUnavailable,
                 ),
+                deadline=10800.0,
             ),
             default_timeout=10800.0,
             client_info=DEFAULT_CLIENT_INFO,
