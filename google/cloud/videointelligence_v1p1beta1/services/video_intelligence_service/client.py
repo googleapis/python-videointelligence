@@ -413,9 +413,8 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
             if input_uri is not None:
                 request.input_uri = input_uri
-
-            if features:
-                request.features.extend(features)
+            if features is not None:
+                request.features = features
 
         # Wrap the RPC method; this adds retry and timeout information,
         # and friendly error handling.
