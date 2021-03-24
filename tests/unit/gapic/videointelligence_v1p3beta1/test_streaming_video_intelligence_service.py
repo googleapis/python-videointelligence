@@ -101,15 +101,25 @@ def test__get_default_mtls_endpoint():
     )
 
 
-def test_streaming_video_intelligence_service_client_from_service_account_info():
+@pytest.mark.parametrize(
+    "client_class",
+    [
+        StreamingVideoIntelligenceServiceClient,
+        StreamingVideoIntelligenceServiceAsyncClient,
+    ],
+)
+def test_streaming_video_intelligence_service_client_from_service_account_info(
+    client_class,
+):
     creds = credentials.AnonymousCredentials()
     with mock.patch.object(
         service_account.Credentials, "from_service_account_info"
     ) as factory:
         factory.return_value = creds
         info = {"valid": True}
-        client = StreamingVideoIntelligenceServiceClient.from_service_account_info(info)
+        client = client_class.from_service_account_info(info)
         assert client.transport._credentials == creds
+        assert isinstance(client, client_class)
 
         assert client.transport._host == "videointelligence.googleapis.com:443"
 
@@ -131,9 +141,11 @@ def test_streaming_video_intelligence_service_client_from_service_account_file(
         factory.return_value = creds
         client = client_class.from_service_account_file("dummy/file/path.json")
         assert client.transport._credentials == creds
+        assert isinstance(client, client_class)
 
         client = client_class.from_service_account_json("dummy/file/path.json")
         assert client.transport._credentials == creds
+        assert isinstance(client, client_class)
 
         assert client.transport._host == "videointelligence.googleapis.com:443"
 
