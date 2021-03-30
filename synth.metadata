@@ -4,29 +4,29 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/python-videointelligence.git",
-        "sha": "a1c8715b9167e683bfa42c372904f70e4e1e5124"
+        "sha": "6b3375a7425719912bf9e8cdb3bb1911c2f3f450"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "dd372aa22ded7a8ba6f0e03a80e06358a3fa0907",
-        "internalRef": "347055288"
+        "sha": "c3918feb2415878ac428d728fb473ed4187b7819",
+        "internalRef": "365166289"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "373861061648b5fe5e0ac4f8a38b32d639ee93e4"
+        "sha": "60fc32cc950c20cfdd774b846a4a7dc5d1e4d0ef"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "373861061648b5fe5e0ac4f8a38b32d639ee93e4"
+        "sha": "60fc32cc950c20cfdd774b846a4a7dc5d1e4d0ef"
       }
     }
   ],
@@ -78,12 +78,14 @@
     }
   ],
   "generatedFiles": [
+    ".coveragerc",
     ".flake8",
     ".github/CONTRIBUTING.md",
     ".github/ISSUE_TEMPLATE/bug_report.md",
     ".github/ISSUE_TEMPLATE/feature_request.md",
     ".github/ISSUE_TEMPLATE/support_request.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/header-checker-lint.yml",
     ".github/release-please.yml",
     ".github/snippet-bot.yml",
     ".gitignore",
@@ -108,16 +110,21 @@
     ".kokoro/samples/lint/presubmit.cfg",
     ".kokoro/samples/python3.6/common.cfg",
     ".kokoro/samples/python3.6/continuous.cfg",
+    ".kokoro/samples/python3.6/periodic-head.cfg",
     ".kokoro/samples/python3.6/periodic.cfg",
     ".kokoro/samples/python3.6/presubmit.cfg",
     ".kokoro/samples/python3.7/common.cfg",
     ".kokoro/samples/python3.7/continuous.cfg",
+    ".kokoro/samples/python3.7/periodic-head.cfg",
     ".kokoro/samples/python3.7/periodic.cfg",
     ".kokoro/samples/python3.7/presubmit.cfg",
     ".kokoro/samples/python3.8/common.cfg",
     ".kokoro/samples/python3.8/continuous.cfg",
+    ".kokoro/samples/python3.8/periodic-head.cfg",
     ".kokoro/samples/python3.8/periodic.cfg",
     ".kokoro/samples/python3.8/presubmit.cfg",
+    ".kokoro/test-samples-against-head.sh",
+    ".kokoro/test-samples-impl.sh",
     ".kokoro/test-samples.sh",
     ".kokoro/trampoline.sh",
     ".kokoro/trampoline_v2.sh",
@@ -133,14 +140,20 @@
     "docs/multiprocessing.rst",
     "docs/videointelligence_v1/services.rst",
     "docs/videointelligence_v1/types.rst",
+    "docs/videointelligence_v1/video_intelligence_service.rst",
     "docs/videointelligence_v1beta2/services.rst",
     "docs/videointelligence_v1beta2/types.rst",
+    "docs/videointelligence_v1beta2/video_intelligence_service.rst",
     "docs/videointelligence_v1p1beta1/services.rst",
     "docs/videointelligence_v1p1beta1/types.rst",
+    "docs/videointelligence_v1p1beta1/video_intelligence_service.rst",
     "docs/videointelligence_v1p2beta1/services.rst",
     "docs/videointelligence_v1p2beta1/types.rst",
+    "docs/videointelligence_v1p2beta1/video_intelligence_service.rst",
     "docs/videointelligence_v1p3beta1/services.rst",
+    "docs/videointelligence_v1p3beta1/streaming_video_intelligence_service.rst",
     "docs/videointelligence_v1p3beta1/types.rst",
+    "docs/videointelligence_v1p3beta1/video_intelligence_service.rst",
     "google/cloud/videointelligence/__init__.py",
     "google/cloud/videointelligence/py.typed",
     "google/cloud/videointelligence_v1/__init__.py",
