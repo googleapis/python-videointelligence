@@ -60,7 +60,8 @@ def test_analyze_labels_file(capsys):
 
 @pytest.mark.slow
 def test_analyze_explicit_content(capsys):
-    while True:
+    try_count = 0
+    while try_count < 3:
         try:
             analyze.analyze_explicit_content("gs://cloud-samples-data/video/cat.mp4")
             out, _ = capsys.readouterr()
@@ -70,6 +71,7 @@ def test_analyze_explicit_content(capsys):
             print("Got service unavailable exception: {}".format(str(e)))
             time.sleep(5)
             continue
+        try_count = try_count + 1
         break
 
 @pytest.mark.slow
