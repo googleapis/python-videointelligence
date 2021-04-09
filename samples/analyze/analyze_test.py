@@ -18,6 +18,10 @@ import pytest
 
 import analyze
 
+import time
+
+from google.api_core.exceptions import ServiceUnavailable
+
 POSSIBLE_TEXTS = [
     "Google",
     "SUR",
@@ -54,13 +58,19 @@ def test_analyze_labels_file(capsys):
     out, _ = capsys.readouterr()
     assert "label description" in out
 
-
 @pytest.mark.slow
 def test_analyze_explicit_content(capsys):
-    analyze.analyze_explicit_content("gs://cloud-samples-data/video/cat.mp4")
-    out, _ = capsys.readouterr()
-    assert "pornography" in out
-
+    while True:
+        try:
+            analyze.analyze_explicit_content("gs://cloud-samples-data/video/cat.mp4")
+            out, _ = capsys.readouterr()
+            assert "pornography" in out
+        except ServiceUnavailable as e:
+            # Service is throttling or not available for the moment, sleep for 5 sec and retrying again.
+            print("Got service unavailable exception: {}".format(str(e)))
+            time.sleep(5)
+            continue
+        break
 
 @pytest.mark.slow
 def test_speech_transcription(capsys):
