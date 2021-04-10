@@ -80,7 +80,6 @@ def test_speech_transcription(capsys):
 
 
 @pytest.mark.slow
-@pytest.mark.flaky(max_runs=3, min_passes=1)
 def test_detect_labels_streaming(capsys, video_path):
     beta_snippets.detect_labels_streaming(video_path)
 
