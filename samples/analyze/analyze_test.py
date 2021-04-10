@@ -58,6 +58,7 @@ def test_analyze_labels_file(capsys):
     out, _ = capsys.readouterr()
     assert "label description" in out
 
+
 @pytest.mark.slow
 def test_analyze_explicit_content(capsys):
     try_count = 0
@@ -73,6 +74,7 @@ def test_analyze_explicit_content(capsys):
             continue
         try_count = try_count + 1
         break
+
 
 @pytest.mark.slow
 def test_speech_transcription(capsys):
