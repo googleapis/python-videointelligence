@@ -15,10 +15,9 @@
 # limitations under the License.
 
 import pytest
+import time
 
 import analyze
-
-import time
 
 from google.api_core.exceptions import ServiceUnavailable
 
