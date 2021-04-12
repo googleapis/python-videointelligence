@@ -14,12 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import pytest
 import time
 
-import analyze
-
 from google.api_core.exceptions import ServiceUnavailable
+
+import pytest
+
+import analyze
 
 POSSIBLE_TEXTS = [
     "Google",
