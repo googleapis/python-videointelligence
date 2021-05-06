@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +16,6 @@
 #
 
 from .services.video_intelligence_service import VideoIntelligenceServiceClient
-
 from .types.video_intelligence import AnnotateVideoProgress
 from .types.video_intelligence import AnnotateVideoRequest
 from .types.video_intelligence import AnnotateVideoResponse
@@ -62,6 +62,7 @@ from .types.video_intelligence import VideoAnnotationResults
 from .types.video_intelligence import VideoContext
 from .types.video_intelligence import VideoSegment
 from .types.video_intelligence import WordInfo
+
 
 __all__ = (
     "AnnotateVideoProgress",

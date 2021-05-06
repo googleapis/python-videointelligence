@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
 from collections import OrderedDict
 import functools
 import re
@@ -37,6 +39,7 @@ from google.oauth2 import service_account  # type: ignore
 
 from google.cloud.videointelligence_v1p3beta1.types import video_intelligence
 from google.rpc import status_pb2 as status  # type: ignore
+
 from .transports.base import (
     StreamingVideoIntelligenceServiceTransport,
     DEFAULT_CLIENT_INFO,
@@ -63,24 +66,28 @@ class StreamingVideoIntelligenceServiceAsyncClient:
     parse_common_billing_account_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.parse_common_billing_account_path
     )
+
     common_folder_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.common_folder_path
     )
     parse_common_folder_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.parse_common_folder_path
     )
+
     common_organization_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.common_organization_path
     )
     parse_common_organization_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.parse_common_organization_path
     )
+
     common_project_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.common_project_path
     )
     parse_common_project_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.parse_common_project_path
     )
+
     common_location_path = staticmethod(
         StreamingVideoIntelligenceServiceClient.common_location_path
     )
@@ -176,6 +183,7 @@ class StreamingVideoIntelligenceServiceAsyncClient:
             google.auth.exceptions.MutualTlsChannelError: If mutual TLS transport
                 creation failed for any reason.
         """
+
         self._client = StreamingVideoIntelligenceServiceClient(
             credentials=credentials,
             transport=transport,
@@ -200,8 +208,7 @@ class StreamingVideoIntelligenceServiceAsyncClient:
 
         Args:
             requests (AsyncIterator[`google.cloud.videointelligence_v1p3beta1.types.StreamingAnnotateVideoRequest`]):
-                The request object AsyncIterator.
-                The top-level message sent by the
+                The request object AsyncIterator. The top-level message sent by the
                 client for the `StreamingAnnotateVideo` method. Multiple
                 `StreamingAnnotateVideoRequest` messages are sent. The
                 first message must only contain a `StreamingVideoConfig`
