@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 from collections import OrderedDict
 from distutils import util
 import os
@@ -35,7 +33,6 @@ from google.oauth2 import service_account  # type: ignore
 from google.api_core import operation  # type: ignore
 from google.api_core import operation_async  # type: ignore
 from google.cloud.videointelligence_v1p1beta1.types import video_intelligence
-
 from .transports.base import VideoIntelligenceServiceTransport, DEFAULT_CLIENT_INFO
 from .transports.grpc import VideoIntelligenceServiceGrpcTransport
 from .transports.grpc_asyncio import VideoIntelligenceServiceGrpcAsyncIOTransport
@@ -348,7 +345,8 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
         Args:
             request (google.cloud.videointelligence_v1p1beta1.types.AnnotateVideoRequest):
-                The request object. Video annotation request.
+                The request object.
+                Video annotation request.
             input_uri (str):
                 Input video location. Currently, only `Google Cloud
                 Storage <https://cloud.google.com/storage/>`__ URIs are
@@ -375,7 +373,6 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
                 This corresponds to the ``features`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-
             retry (google.api_core.retry.Retry): Designation of what errors, if any,
                 should be retried.
             timeout (float): The timeout for this request.
@@ -407,10 +404,8 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
         # there are no flattened fields.
         if not isinstance(request, video_intelligence.AnnotateVideoRequest):
             request = video_intelligence.AnnotateVideoRequest(request)
-
             # If we have keyword arguments corresponding to fields on the
             # request, apply these.
-
             if input_uri is not None:
                 request.input_uri = input_uri
             if features is not None:

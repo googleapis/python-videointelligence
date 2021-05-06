@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 # Copyright 2020 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 from collections import OrderedDict
 from distutils import util
 import os
@@ -44,7 +42,6 @@ from google.oauth2 import service_account  # type: ignore
 
 from google.cloud.videointelligence_v1p3beta1.types import video_intelligence
 from google.rpc import status_pb2 as status  # type: ignore
-
 from .transports.base import (
     StreamingVideoIntelligenceServiceTransport,
     DEFAULT_CLIENT_INFO,
@@ -363,7 +360,8 @@ class StreamingVideoIntelligenceServiceClient(
 
         Args:
             requests (Iterator[google.cloud.videointelligence_v1p3beta1.types.StreamingAnnotateVideoRequest]):
-                The request object iterator. The top-level message sent by the
+                The request object iterator.
+                The top-level message sent by the
                 client for the `StreamingAnnotateVideo` method. Multiple
                 `StreamingAnnotateVideoRequest` messages are sent. The
                 first message must only contain a `StreamingVideoConfig`
