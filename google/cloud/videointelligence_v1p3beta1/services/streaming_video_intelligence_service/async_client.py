@@ -200,7 +200,8 @@ class StreamingVideoIntelligenceServiceAsyncClient:
 
         Args:
             requests (AsyncIterator[`google.cloud.videointelligence_v1p3beta1.types.StreamingAnnotateVideoRequest`]):
-                The request object AsyncIterator. The top-level message sent by the
+                The request object AsyncIterator.
+                The top-level message sent by the
                 client for the `StreamingAnnotateVideo` method. Multiple
                 `StreamingAnnotateVideoRequest` messages are sent. The
                 first message must only contain a `StreamingVideoConfig`

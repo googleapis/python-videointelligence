@@ -23,10 +23,13 @@ from .types.video_intelligence import Entity
 from .types.video_intelligence import ExplicitContentAnnotation
 from .types.video_intelligence import ExplicitContentDetectionConfig
 from .types.video_intelligence import ExplicitContentFrame
+from .types.video_intelligence import Feature
 from .types.video_intelligence import LabelAnnotation
 from .types.video_intelligence import LabelDetectionConfig
+from .types.video_intelligence import LabelDetectionMode
 from .types.video_intelligence import LabelFrame
 from .types.video_intelligence import LabelSegment
+from .types.video_intelligence import Likelihood
 from .types.video_intelligence import NormalizedBoundingBox
 from .types.video_intelligence import NormalizedBoundingPoly
 from .types.video_intelligence import NormalizedVertex
@@ -41,12 +44,8 @@ from .types.video_intelligence import VideoAnnotationProgress
 from .types.video_intelligence import VideoAnnotationResults
 from .types.video_intelligence import VideoContext
 from .types.video_intelligence import VideoSegment
-from .types.video_intelligence import Feature
-from .types.video_intelligence import LabelDetectionMode
-from .types.video_intelligence import Likelihood
 
 __all__ = (
-    "VideoIntelligenceServiceClient",
     "AnnotateVideoProgress",
     "AnnotateVideoRequest",
     "AnnotateVideoResponse",
@@ -54,10 +53,13 @@ __all__ = (
     "ExplicitContentAnnotation",
     "ExplicitContentDetectionConfig",
     "ExplicitContentFrame",
+    "Feature",
     "LabelAnnotation",
     "LabelDetectionConfig",
+    "LabelDetectionMode",
     "LabelFrame",
     "LabelSegment",
+    "Likelihood",
     "NormalizedBoundingBox",
     "NormalizedBoundingPoly",
     "NormalizedVertex",
@@ -72,7 +74,5 @@ __all__ = (
     "VideoAnnotationResults",
     "VideoContext",
     "VideoSegment",
-    "Feature",
-    "LabelDetectionMode",
-    "Likelihood",
+    "VideoIntelligenceServiceClient",
 )

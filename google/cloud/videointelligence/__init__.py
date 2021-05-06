@@ -14,13 +14,12 @@
 # limitations under the License.
 #
 
-from google.cloud.videointelligence_v1.services.video_intelligence_service.client import (
-    VideoIntelligenceServiceClient,
-)
 from google.cloud.videointelligence_v1.services.video_intelligence_service.async_client import (
     VideoIntelligenceServiceAsyncClient,
 )
-
+from google.cloud.videointelligence_v1.services.video_intelligence_service.client import (
+    VideoIntelligenceServiceClient,
+)
 from google.cloud.videointelligence_v1.types.video_intelligence import (
     AnnotateVideoProgress,
 )
@@ -51,12 +50,17 @@ from google.cloud.videointelligence_v1.types.video_intelligence import (
 )
 from google.cloud.videointelligence_v1.types.video_intelligence import FaceFrame
 from google.cloud.videointelligence_v1.types.video_intelligence import FaceSegment
+from google.cloud.videointelligence_v1.types.video_intelligence import Feature
 from google.cloud.videointelligence_v1.types.video_intelligence import LabelAnnotation
 from google.cloud.videointelligence_v1.types.video_intelligence import (
     LabelDetectionConfig,
 )
+from google.cloud.videointelligence_v1.types.video_intelligence import (
+    LabelDetectionMode,
+)
 from google.cloud.videointelligence_v1.types.video_intelligence import LabelFrame
 from google.cloud.videointelligence_v1.types.video_intelligence import LabelSegment
+from google.cloud.videointelligence_v1.types.video_intelligence import Likelihood
 from google.cloud.videointelligence_v1.types.video_intelligence import (
     LogoRecognitionAnnotation,
 )
@@ -112,15 +116,8 @@ from google.cloud.videointelligence_v1.types.video_intelligence import (
 from google.cloud.videointelligence_v1.types.video_intelligence import VideoContext
 from google.cloud.videointelligence_v1.types.video_intelligence import VideoSegment
 from google.cloud.videointelligence_v1.types.video_intelligence import WordInfo
-from google.cloud.videointelligence_v1.types.video_intelligence import Feature
-from google.cloud.videointelligence_v1.types.video_intelligence import (
-    LabelDetectionMode,
-)
-from google.cloud.videointelligence_v1.types.video_intelligence import Likelihood
 
 __all__ = (
-    "VideoIntelligenceServiceClient",
-    "VideoIntelligenceServiceAsyncClient",
     "AnnotateVideoProgress",
     "AnnotateVideoRequest",
     "AnnotateVideoResponse",
@@ -135,10 +132,13 @@ __all__ = (
     "FaceDetectionConfig",
     "FaceFrame",
     "FaceSegment",
+    "Feature",
     "LabelAnnotation",
     "LabelDetectionConfig",
+    "LabelDetectionMode",
     "LabelFrame",
     "LabelSegment",
+    "Likelihood",
     "LogoRecognitionAnnotation",
     "NormalizedBoundingBox",
     "NormalizedBoundingPoly",
@@ -162,9 +162,8 @@ __all__ = (
     "VideoAnnotationProgress",
     "VideoAnnotationResults",
     "VideoContext",
+    "VideoIntelligenceServiceAsyncClient",
+    "VideoIntelligenceServiceClient",
     "VideoSegment",
     "WordInfo",
-    "Feature",
-    "LabelDetectionMode",
-    "Likelihood",
 )

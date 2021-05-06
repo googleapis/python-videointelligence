@@ -242,7 +242,9 @@ class VideoIntelligenceServiceGrpcTransport(VideoIntelligenceServiceTransport):
     def annotate_video(
         self,
     ) -> Callable[[video_intelligence.AnnotateVideoRequest], operations.Operation]:
-        r"""Return a callable for the annotate video method over gRPC.
+        r"""Return a callable for the
+        annotate video
+          method over gRPC.
 
         Performs asynchronous video annotation. Progress and results can
         be retrieved through the ``google.longrunning.Operations``
