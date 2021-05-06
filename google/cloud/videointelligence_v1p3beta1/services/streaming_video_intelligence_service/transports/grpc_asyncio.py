@@ -234,9 +234,7 @@ class StreamingVideoIntelligenceServiceGrpcAsyncIOTransport(
         [video_intelligence.StreamingAnnotateVideoRequest],
         Awaitable[video_intelligence.StreamingAnnotateVideoResponse],
     ]:
-        r"""Return a callable for the
-        streaming annotate video
-          method over gRPC.
+        r"""Return a callable for the streaming annotate video method over gRPC.
 
         Performs video annotation with bidirectional
         streaming: emitting results while sending video/audio

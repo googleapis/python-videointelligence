@@ -345,8 +345,7 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
         Args:
             request (google.cloud.videointelligence_v1p1beta1.types.AnnotateVideoRequest):
-                The request object.
-                Video annotation request.
+                The request object. Video annotation request.
             input_uri (str):
                 Input video location. Currently, only `Google Cloud
                 Storage <https://cloud.google.com/storage/>`__ URIs are

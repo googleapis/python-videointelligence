@@ -33,13 +33,10 @@ from .types.video_intelligence import ExplicitContentDetectionConfig
 from .types.video_intelligence import ExplicitContentFrame
 from .types.video_intelligence import FaceDetectionAnnotation
 from .types.video_intelligence import FaceDetectionConfig
-from .types.video_intelligence import Feature
 from .types.video_intelligence import LabelAnnotation
 from .types.video_intelligence import LabelDetectionConfig
-from .types.video_intelligence import LabelDetectionMode
 from .types.video_intelligence import LabelFrame
 from .types.video_intelligence import LabelSegment
-from .types.video_intelligence import Likelihood
 from .types.video_intelligence import LogoRecognitionAnnotation
 from .types.video_intelligence import NormalizedBoundingBox
 from .types.video_intelligence import NormalizedBoundingPoly
@@ -60,7 +57,6 @@ from .types.video_intelligence import StreamingAutomlActionRecognitionConfig
 from .types.video_intelligence import StreamingAutomlClassificationConfig
 from .types.video_intelligence import StreamingAutomlObjectTrackingConfig
 from .types.video_intelligence import StreamingExplicitContentDetectionConfig
-from .types.video_intelligence import StreamingFeature
 from .types.video_intelligence import StreamingLabelDetectionConfig
 from .types.video_intelligence import StreamingObjectTrackingConfig
 from .types.video_intelligence import StreamingShotChangeDetectionConfig
@@ -78,8 +74,14 @@ from .types.video_intelligence import VideoAnnotationResults
 from .types.video_intelligence import VideoContext
 from .types.video_intelligence import VideoSegment
 from .types.video_intelligence import WordInfo
+from .types.video_intelligence import Feature
+from .types.video_intelligence import LabelDetectionMode
+from .types.video_intelligence import Likelihood
+from .types.video_intelligence import StreamingFeature
 
 __all__ = (
+    "StreamingVideoIntelligenceServiceClient",
+    "VideoIntelligenceServiceClient",
     "AnnotateVideoProgress",
     "AnnotateVideoRequest",
     "AnnotateVideoResponse",
@@ -94,13 +96,10 @@ __all__ = (
     "ExplicitContentFrame",
     "FaceDetectionAnnotation",
     "FaceDetectionConfig",
-    "Feature",
     "LabelAnnotation",
     "LabelDetectionConfig",
-    "LabelDetectionMode",
     "LabelFrame",
     "LabelSegment",
-    "Likelihood",
     "LogoRecognitionAnnotation",
     "NormalizedBoundingBox",
     "NormalizedBoundingPoly",
@@ -121,14 +120,12 @@ __all__ = (
     "StreamingAutomlClassificationConfig",
     "StreamingAutomlObjectTrackingConfig",
     "StreamingExplicitContentDetectionConfig",
-    "StreamingFeature",
     "StreamingLabelDetectionConfig",
     "StreamingObjectTrackingConfig",
     "StreamingShotChangeDetectionConfig",
     "StreamingStorageConfig",
     "StreamingVideoAnnotationResults",
     "StreamingVideoConfig",
-    "StreamingVideoIntelligenceServiceClient",
     "TextAnnotation",
     "TextDetectionConfig",
     "TextFrame",
@@ -140,5 +137,8 @@ __all__ = (
     "VideoContext",
     "VideoSegment",
     "WordInfo",
-    "VideoIntelligenceServiceClient",
+    "Feature",
+    "LabelDetectionMode",
+    "Likelihood",
+    "StreamingFeature",
 )

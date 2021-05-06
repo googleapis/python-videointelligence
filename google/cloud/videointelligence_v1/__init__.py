@@ -30,13 +30,10 @@ from .types.video_intelligence import FaceDetectionAnnotation
 from .types.video_intelligence import FaceDetectionConfig
 from .types.video_intelligence import FaceFrame
 from .types.video_intelligence import FaceSegment
-from .types.video_intelligence import Feature
 from .types.video_intelligence import LabelAnnotation
 from .types.video_intelligence import LabelDetectionConfig
-from .types.video_intelligence import LabelDetectionMode
 from .types.video_intelligence import LabelFrame
 from .types.video_intelligence import LabelSegment
-from .types.video_intelligence import Likelihood
 from .types.video_intelligence import LogoRecognitionAnnotation
 from .types.video_intelligence import NormalizedBoundingBox
 from .types.video_intelligence import NormalizedBoundingPoly
@@ -62,8 +59,12 @@ from .types.video_intelligence import VideoAnnotationResults
 from .types.video_intelligence import VideoContext
 from .types.video_intelligence import VideoSegment
 from .types.video_intelligence import WordInfo
+from .types.video_intelligence import Feature
+from .types.video_intelligence import LabelDetectionMode
+from .types.video_intelligence import Likelihood
 
 __all__ = (
+    "VideoIntelligenceServiceClient",
     "AnnotateVideoProgress",
     "AnnotateVideoRequest",
     "AnnotateVideoResponse",
@@ -78,13 +79,10 @@ __all__ = (
     "FaceDetectionConfig",
     "FaceFrame",
     "FaceSegment",
-    "Feature",
     "LabelAnnotation",
     "LabelDetectionConfig",
-    "LabelDetectionMode",
     "LabelFrame",
     "LabelSegment",
-    "Likelihood",
     "LogoRecognitionAnnotation",
     "NormalizedBoundingBox",
     "NormalizedBoundingPoly",
@@ -110,5 +108,7 @@ __all__ = (
     "VideoContext",
     "VideoSegment",
     "WordInfo",
-    "VideoIntelligenceServiceClient",
+    "Feature",
+    "LabelDetectionMode",
+    "Likelihood",
 )
