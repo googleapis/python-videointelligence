@@ -4,6 +4,13 @@
 
 [1]: https://pypi.org/project/google-cloud-videointelligence/#history
 
+### [2.2.1](https://www.github.com/googleapis/python-videointelligence/compare/v2.2.0...v2.2.1) (2021-06-26)
+
+
+### Documentation
+
+* omit mention of Python 2.7 in 'CONTRIBUTING.rst' ([#1127](https://www.github.com/googleapis/python-videointelligence/issues/1127)) ([#163](https://www.github.com/googleapis/python-videointelligence/issues/163)) ([09b0a33](https://www.github.com/googleapis/python-videointelligence/commit/09b0a338c8de99dc547c5dc5e15b42d14210ba18)), closes [#1126](https://www.github.com/googleapis/python-videointelligence/issues/1126)
+
 ## [2.2.0](https://www.github.com/googleapis/python-videointelligence/compare/v2.1.0...v2.2.0) (2021-05-28)
 
 
