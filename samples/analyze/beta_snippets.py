@@ -764,16 +764,6 @@ if __name__ == "__main__":
     )
     video_text_parser.add_argument("path")
 
-    video_object_tracking_gcs_parser = subparsers.add_parser(
-        "track-objects-gcs", help=track_objects_gcs.__doc__
-    )
-    video_object_tracking_gcs_parser.add_argument("gcs_uri")
-
-    video_object_tracking_parser = subparsers.add_parser(
-        "track-objects", help=track_objects.__doc__
-    )
-    video_object_tracking_parser.add_argument("path")
-
     video_streaming_labels_parser = subparsers.add_parser(
         "streaming-labels", help=detect_labels_streaming.__doc__
     )
@@ -822,10 +812,6 @@ if __name__ == "__main__":
         video_detect_text_gcs(args.gcs_uri)
     elif args.command == "video-text":
         video_detect_text(args.path)
-    elif args.command == "track-objects-gcs":
-        track_objects_gcs(args.gcs_uri)
-    elif args.command == "track-objects":
-        track_objects(args.path)
     elif args.command == "streaming-labels":
         detect_labels_streaming(args.path)
     elif args.command == "streaming-shot-change":
