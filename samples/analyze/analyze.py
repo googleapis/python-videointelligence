@@ -41,7 +41,7 @@ def analyze_explicit_content(path):
     # [START video_analyze_explicit_content]
     """ Detects explicit content from the GCS path to a video. """
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.EXPLICIT_CONTENT_DETECTION]
+    features = [videointelligence.enums.Feature.EXPLICIT_CONTENT_DETECTION]
 
     operation = video_client.annotate_video(
         request={"features": features, "input_uri": path}
@@ -64,11 +64,11 @@ def analyze_labels(path):
     # [START video_analyze_labels_gcs]
     """ Detects labels given a GCS path. """
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.LABEL_DETECTION]
+    features = [videointelligence.enums.Feature.LABEL_DETECTION]
 
-    mode = videointelligence.LabelDetectionMode.SHOT_AND_FRAME_MODE
-    config = videointelligence.LabelDetectionConfig(label_detection_mode=mode)
-    context = videointelligence.VideoContext(label_detection_config=config)
+    mode = videointelligence.enums.LabelDetectionMode.SHOT_AND_FRAME_MODE
+    config = videointelligence.types.LabelDetectionConfig(label_detection_mode=mode)
+    context = videointelligence.types.VideoContext(label_detection_config=config)
 
     operation = video_client.annotate_video(
         request={"features": features, "input_uri": path, "video_context": context}
@@ -149,7 +149,7 @@ def analyze_labels_file(path):
     # [START video_analyze_labels]
     """Detect labels given a file path."""
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.LABEL_DETECTION]
+    features = [videointelligence.enums.Feature.LABEL_DETECTION]
 
     with io.open(path, "rb") as movie:
         input_content = movie.read()
@@ -233,7 +233,7 @@ def analyze_shots(path):
     # [START video_analyze_shots]
     """ Detects camera shot changes. """
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.SHOT_CHANGE_DETECTION]
+    features = [videointelligence.enums.Feature.SHOT_CHANGE_DETECTION]
     operation = video_client.annotate_video(
         request={"features": features, "input_uri": path}
     )
@@ -260,12 +260,12 @@ def speech_transcription(path):
     from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.SPEECH_TRANSCRIPTION]
+    features = [videointelligence.enums.Feature.SPEECH_TRANSCRIPTION]
 
-    config = videointelligence.SpeechTranscriptionConfig(
+    config = videointelligence.types.SpeechTranscriptionConfig(
         language_code="en-US", enable_automatic_punctuation=True
     )
-    video_context = videointelligence.VideoContext(speech_transcription_config=config)
+    video_context = videointelligence.types.VideoContext(speech_transcription_config=config)
 
     operation = video_client.annotate_video(
         request={
@@ -315,7 +315,7 @@ def video_detect_text_gcs(input_uri):
     from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.TEXT_DETECTION]
+    features = [videointelligence.enums.Feature.TEXT_DETECTION]
 
     operation = video_client.annotate_video(
         request={"features": features, "input_uri": input_uri}
@@ -363,8 +363,8 @@ def video_detect_text(path):
     from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.TEXT_DETECTION]
-    video_context = videointelligence.VideoContext()
+    features = [videointelligence.enums.Feature.TEXT_DETECTION]
+    video_context = videointelligence.types.VideoContext()
 
     with io.open(path, "rb") as file:
         input_content = file.read()
@@ -419,7 +419,7 @@ def track_objects_gcs(gcs_uri):
     from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.OBJECT_TRACKING]
+    features = [videointelligence.enums.Feature.OBJECT_TRACKING]
     operation = video_client.annotate_video(
         request={"features": features, "input_uri": gcs_uri}
     )
@@ -470,7 +470,7 @@ def track_objects(path):
     from google.cloud import videointelligence
 
     video_client = videointelligence.VideoIntelligenceServiceClient()
-    features = [videointelligence.Feature.OBJECT_TRACKING]
+    features = [videointelligence.enums.Feature.OBJECT_TRACKING]
 
     with io.open(path, "rb") as file:
         input_content = file.read()
