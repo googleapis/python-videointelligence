@@ -101,7 +101,7 @@ def default(session):
         "py.test",
         "--quiet",
         f"--junitxml=unit_{session.python}_sponge_log.xml",
-        "--cov=google/cloud",
+        "--cov=google",
         "--cov=tests/unit",
         "--cov-append",
         "--cov-config=.coveragerc",
@@ -175,7 +175,7 @@ def cover(session):
     test runs (not system test runs), and then erases coverage data.
     """
     session.install("coverage", "pytest-cov")
-    session.run("coverage", "report", "--show-missing", "--fail-under=70")
+    session.run("coverage", "report", "--show-missing", "--fail-under=100")
 
     session.run("coverage", "erase")
 
