@@ -402,6 +402,29 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
         ``AnnotateVideoProgress`` (progress). ``Operation.response``
         contains ``AnnotateVideoResponse`` (results).
 
+
+
+        .. code-block::
+
+            from google.cloud import videointelligence_v1p3beta1
+
+            def sample_annotate_video():
+                # Create a client
+                client = videointelligence_v1p3beta1.VideoIntelligenceServiceClient()
+
+                # Initialize request argument(s)
+                request = videointelligence_v1p3beta1.AnnotateVideoRequest(
+                    features="PERSON_DETECTION",
+                )
+
+                # Make the request
+                operation = client.annotate_video(request=request)
+
+                print("Waiting for operation to complete...")
+
+                response = operation.result()
+                print(response)
+
         Args:
             request (Union[google.cloud.videointelligence_v1p3beta1.types.AnnotateVideoRequest, dict]):
                 The request object. Video annotation request.
@@ -447,7 +470,7 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
         """
         # Create or coerce a protobuf request object.
-        # Sanity check: If we got a request object, we should *not* have
+        # Quick check: If we got a request object, we should *not* have
         # gotten any keyword arguments that map to the request.
         has_flattened_params = any([input_uri, features])
         if request is not None and has_flattened_params:
