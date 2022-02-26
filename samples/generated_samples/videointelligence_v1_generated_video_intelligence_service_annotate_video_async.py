@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2020 Google LLC
+# Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,17 +23,17 @@
 #   python3 -m pip install google-cloud-videointelligence
 
 
-# [START videointelligence_generated_videointelligence_v1p1beta1_VideoIntelligenceService_AnnotateVideo_async]
-from google.cloud import videointelligence_v1p1beta1
+# [START videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async]
+from google.cloud import videointelligence_v1
 
 
 async def sample_annotate_video():
     # Create a client
-    client = videointelligence_v1p1beta1.VideoIntelligenceServiceAsyncClient()
+    client = videointelligence_v1.VideoIntelligenceServiceAsyncClient()
 
     # Initialize request argument(s)
-    request = videointelligence_v1p1beta1.AnnotateVideoRequest(
-        features="SPEECH_TRANSCRIPTION",
+    request = videointelligence_v1.AnnotateVideoRequest(
+        features="PERSON_DETECTION",
     )
 
     # Make the request
@@ -46,4 +46,4 @@ async def sample_annotate_video():
     # Handle the response
     print(response)
 
-# [END videointelligence_generated_videointelligence_v1p1beta1_VideoIntelligenceService_AnnotateVideo_async]
+# [END videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_async]

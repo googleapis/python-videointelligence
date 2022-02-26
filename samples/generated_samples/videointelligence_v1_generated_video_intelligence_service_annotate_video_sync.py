@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2020 Google LLC
+# Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,13 +23,13 @@
 #   python3 -m pip install google-cloud-videointelligence
 
 
-# [START videointelligence_generated_videointelligence_v1_VideoIntelligenceService_AnnotateVideo_async]
+# [START videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync]
 from google.cloud import videointelligence_v1
 
 
-async def sample_annotate_video():
+def sample_annotate_video():
     # Create a client
-    client = videointelligence_v1.VideoIntelligenceServiceAsyncClient()
+    client = videointelligence_v1.VideoIntelligenceServiceClient()
 
     # Initialize request argument(s)
     request = videointelligence_v1.AnnotateVideoRequest(
@@ -41,9 +41,9 @@ async def sample_annotate_video():
 
     print("Waiting for operation to complete...")
 
-    response = await operation.result()
+    response = operation.result()
 
     # Handle the response
     print(response)
 
-# [END videointelligence_generated_videointelligence_v1_VideoIntelligenceService_AnnotateVideo_async]
+# [END videointelligence_v1_generated_VideoIntelligenceService_AnnotateVideo_sync]

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2020 Google LLC
+# Copyright 2022 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,13 +23,13 @@
 #   python3 -m pip install google-cloud-videointelligence
 
 
-# [START videointelligence_generated_videointelligence_v1p3beta1_StreamingVideoIntelligenceService_StreamingAnnotateVideo_sync]
+# [START videointelligence_v1p3beta1_generated_StreamingVideoIntelligenceService_StreamingAnnotateVideo_async]
 from google.cloud import videointelligence_v1p3beta1
 
 
-def sample_streaming_annotate_video():
+async def sample_streaming_annotate_video():
     # Create a client
-    client = videointelligence_v1p3beta1.StreamingVideoIntelligenceServiceClient()
+    client = videointelligence_v1p3beta1.StreamingVideoIntelligenceServiceAsyncClient()
 
     # Initialize request argument(s)
     request = videointelligence_v1p3beta1.StreamingAnnotateVideoRequest(
@@ -46,10 +46,10 @@ def sample_streaming_annotate_video():
             yield request
 
     # Make the request
-    stream = client.streaming_annotate_video(requests=request_generator())
+    stream = await client.streaming_annotate_video(requests=request_generator())
 
     # Handle the response
-    for response in stream:
+    async for response in stream:
         print(response)
 
-# [END videointelligence_generated_videointelligence_v1p3beta1_StreamingVideoIntelligenceService_StreamingAnnotateVideo_sync]
+# [END videointelligence_v1p3beta1_generated_StreamingVideoIntelligenceService_StreamingAnnotateVideo_async]
