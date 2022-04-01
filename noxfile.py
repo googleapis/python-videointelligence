@@ -23,7 +23,7 @@ import shutil
 import nox
 
 
-BLACK_VERSION = "black==19.10b0"
+BLACK_VERSION = "black==22.3.0"
 BLACK_PATHS = ["docs", "google", "tests", "noxfile.py", "setup.py"]
 
 DEFAULT_PYTHON_VERSION = "3.8"
@@ -40,12 +40,14 @@ def lint(session):
     """
     session.install("flake8", BLACK_VERSION)
     session.run(
-        "black", "--check", *BLACK_PATHS,
+        "black",
+        "--check",
+        *BLACK_PATHS,
     )
     session.run("flake8", "google", "tests")
 
 
-@nox.session(python="3.6")
+@nox.session(python=DEFAULT_PYTHON_VERSION)
 def blacken(session):
     """Run black.
 
@@ -57,7 +59,8 @@ def blacken(session):
     """
     session.install(BLACK_VERSION)
     session.run(
-        "black", *BLACK_PATHS,
+        "black",
+        *BLACK_PATHS,
     )
 
 
@@ -71,7 +74,9 @@ def lint_setup_py(session):
 def default(session):
     # Install all test dependencies, then install this package in-place.
     session.install(
-        "mock", "pytest", "pytest-cov",
+        "mock",
+        "pytest",
+        "pytest-cov",
     )
     session.install("-e", ".")
 
@@ -122,7 +127,9 @@ def system(session):
     # Install all test dependencies, then install this package into the
     # virtualenv's dist-packages.
     session.install(
-        "mock", "pytest", "google-cloud-testutils",
+        "mock",
+        "pytest",
+        "google-cloud-testutils",
     )
     session.install("-e", ".")
 
@@ -151,7 +158,7 @@ def docs(session):
     """Build the docs for this library."""
 
     session.install("-e", ".")
-    session.install("sphinx<=3.0.0", "alabaster", "recommonmark")
+    session.install("sphinx<3.0.0", "alabaster", "recommonmark", "Jinja2<3.1")
 
     shutil.rmtree(os.path.join("docs", "_build"), ignore_errors=True)
     session.run(

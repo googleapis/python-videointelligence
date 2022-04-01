@@ -2173,7 +2173,9 @@ _CELEBRITYTRACK = _descriptor.Descriptor(
         ),
     ],
     extensions=[],
-    nested_types=[_CELEBRITYTRACK_RECOGNIZEDCELEBRITY,],
+    nested_types=[
+        _CELEBRITYTRACK_RECOGNIZEDCELEBRITY,
+    ],
     enum_types=[],
     serialized_options=None,
     is_extendable=False,
