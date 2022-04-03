@@ -11,8 +11,7 @@ from google.longrunning import (
 
 
 class VideoIntelligenceServiceStub(object):
-    """Service that implements the Video Intelligence API.
-    """
+    """Service that implements the Video Intelligence API."""
 
     def __init__(self, channel):
         """Constructor.
@@ -28,8 +27,7 @@ class VideoIntelligenceServiceStub(object):
 
 
 class VideoIntelligenceServiceServicer(object):
-    """Service that implements the Video Intelligence API.
-    """
+    """Service that implements the Video Intelligence API."""
 
     def AnnotateVideo(self, request, context):
         """Performs asynchronous video annotation. Progress and results can be
@@ -59,8 +57,7 @@ def add_VideoIntelligenceServiceServicer_to_server(servicer, server):
 
 # This class is part of an EXPERIMENTAL API.
 class VideoIntelligenceService(object):
-    """Service that implements the Video Intelligence API.
-    """
+    """Service that implements the Video Intelligence API."""
 
     @staticmethod
     def AnnotateVideo(
