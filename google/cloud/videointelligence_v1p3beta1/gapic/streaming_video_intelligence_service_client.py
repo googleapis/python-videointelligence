@@ -164,7 +164,9 @@ class StreamingVideoIntelligenceServiceClient(object):
                 self.transport = transport
         else:
             self.transport = streaming_video_intelligence_service_grpc_transport.StreamingVideoIntelligenceServiceGrpcTransport(
-                address=api_endpoint, channel=channel, credentials=credentials,
+                address=api_endpoint,
+                channel=channel,
+                credentials=credentials,
             )
 
         if client_info is None:
