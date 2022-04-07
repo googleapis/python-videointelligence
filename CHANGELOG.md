@@ -4,6 +4,15 @@
 
 [1]: https://pypi.org/project/google-cloud-videointelligence/#history
 
+
+### [1.16.2](https://github.com/googleapis/python-videointelligence/compare/v1.16.1...v1.16.2) (2022-04-06)
+
+
+### Bug Fixes
+
+* **deps:** require google-api-core >= 1.31.5, >= 2.3.2 on v1 release ([#287](https://github.com/googleapis/python-videointelligence/issues/287)) ([9e84b6e](https://github.com/googleapis/python-videointelligence/commit/9e84b6e568e501d1a8fa19decfbc35e85873353c))
+
+
 ### [1.16.1](https://www.github.com/googleapis/python-videointelligence/compare/v1.16.0...v1.16.1) (2020-11-18)
 
 
