@@ -16,7 +16,17 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Optional, Iterable, Iterator, Sequence, Tuple, Type, Union
+from typing import (
+    Dict,
+    Mapping,
+    Optional,
+    Iterable,
+    Iterator,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+)
 import pkg_resources
 
 from google.api_core import client_options as client_options_lib
@@ -429,7 +439,7 @@ class StreamingVideoIntelligenceServiceClient(
 
         .. code-block:: python
 
-            from google.cloud import videointelligence_v1p3beta1
+                    from google.cloud import videointelligence_v1p3beta1
 
             def sample_streaming_annotate_video():
                 # Create a client
