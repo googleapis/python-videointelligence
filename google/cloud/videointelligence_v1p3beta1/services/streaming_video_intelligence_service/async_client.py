@@ -18,6 +18,7 @@ import functools
 import re
 from typing import (
     Dict,
+    Mapping,
     Optional,
     AsyncIterable,
     Awaitable,
@@ -241,7 +242,6 @@ class StreamingVideoIntelligenceServiceAsyncClient:
         bytes. This method is only available via the gRPC API
         (not REST).
 
-
         .. code-block:: python
 
             from google.cloud import videointelligence_v1p3beta1
@@ -303,8 +303,7 @@ class StreamingVideoIntelligenceServiceAsyncClient:
                 maximum=60.0,
                 multiplier=1.3,
                 predicate=retries.if_exception_type(
-                    core_exceptions.DeadlineExceeded,
-                    core_exceptions.ServiceUnavailable,
+                    core_exceptions.GoogleAPICallError,
                 ),
                 deadline=10800.0,
             ),
