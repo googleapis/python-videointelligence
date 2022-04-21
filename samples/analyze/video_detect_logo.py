@@ -14,9 +14,9 @@
 
 import io
 
-# [START video_detect_logo]
-
 from google.cloud import videointelligence
+
+# [START video_detect_logo]
 
 
 def detect_logo(local_file_path="path/to/your/video.mp4"):
