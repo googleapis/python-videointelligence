@@ -17,13 +17,11 @@ from collections import OrderedDict
 import functools
 import re
 from typing import (
-    Dict,
-    Mapping,
-    Optional,
     AsyncIterable,
     AsyncIterator,
     Awaitable,
     Dict,
+    Mapping,
     Optional,
     Sequence,
     Tuple,

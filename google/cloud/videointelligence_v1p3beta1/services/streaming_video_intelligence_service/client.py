@@ -18,10 +18,10 @@ import os
 import re
 from typing import (
     Dict,
-    Mapping,
-    Optional,
     Iterable,
     Iterator,
+    Mapping,
+    Optional,
     Sequence,
     Tuple,
     Type,
