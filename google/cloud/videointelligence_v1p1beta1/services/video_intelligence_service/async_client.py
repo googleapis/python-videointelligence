@@ -16,7 +16,7 @@
 from collections import OrderedDict
 import functools
 import re
-from typing import Dict, Optional, Sequence, Tuple, Type, Union
+from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union
 
 from google.api_core import exceptions as core_exceptions
 from google.api_core import gapic_v1
@@ -223,7 +223,6 @@ class VideoIntelligenceServiceAsyncClient:
         interface. ``Operation.metadata`` contains
         ``AnnotateVideoProgress`` (progress). ``Operation.response``
         contains ``AnnotateVideoResponse`` (results).
-
 
         .. code-block:: python
 
