@@ -16,7 +16,17 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Iterable, Iterator, Optional, Sequence, Tuple, Type, Union
+from typing import (
+    Dict,
+    Iterable,
+    Iterator,
+    Mapping,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -427,7 +437,6 @@ class StreamingVideoIntelligenceServiceClient(
         streaming: emitting results while sending video/audio
         bytes. This method is only available via the gRPC API
         (not REST).
-
 
         .. code-block:: python
 
