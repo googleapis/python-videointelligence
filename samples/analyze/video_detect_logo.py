@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+# isort: split
+# [START video_detect_logo]
 import io
 
 from google.cloud import videointelligence
-
-# [START video_detect_logo]
 
 
 def detect_logo(local_file_path="path/to/your/video.mp4"):
