@@ -1122,7 +1122,6 @@ def test_video_intelligence_service_transport_auth_adc(transport_class):
     [
         transports.VideoIntelligenceServiceGrpcTransport,
         transports.VideoIntelligenceServiceGrpcAsyncIOTransport,
-        transports.VideoIntelligenceServiceRestTransport,
     ],
 )
 def test_video_intelligence_service_transport_auth_gdch_credentials(transport_class):

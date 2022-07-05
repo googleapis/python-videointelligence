@@ -1026,7 +1026,6 @@ def test_streaming_video_intelligence_service_transport_auth_adc(transport_class
     [
         transports.StreamingVideoIntelligenceServiceGrpcTransport,
         transports.StreamingVideoIntelligenceServiceGrpcAsyncIOTransport,
-        transports.StreamingVideoIntelligenceServiceRestTransport,
     ],
 )
 def test_streaming_video_intelligence_service_transport_auth_gdch_credentials(
