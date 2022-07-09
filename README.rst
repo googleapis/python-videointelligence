@@ -1,9 +1,9 @@
-Python Client for Cloud Video Intelligence API
-==============================================
+Python Client for Video Intelligence API
+========================================
 
 |stable| |pypi| |versions|
 
-`Cloud Video Intelligence API`_: makes videos searchable, and discoverable, by extracting metadata with an easy to use API. You can now search every moment of every video file in your catalog and find every occurrence as well as its significance. It quickly annotates videos stored in Google Cloud Storage, and helps you identify key nouns entities of your video, and when they occur within the video. Separate signal from noise, by retrieving relevant information at the video, shot or per frame.
+`Video Intelligence API`_: makes videos searchable, and discoverable, by extracting metadata with an easy to use API. You can now search every moment of every video file in your catalog and find every occurrence as well as its significance. It quickly annotates videos stored in Google Cloud Storage, and helps you identify key nouns entities of your video, and when they occur within the video. Separate signal from noise, by retrieving relevant information at the video, shot or per frame.
 
 - `Client Library Documentation`_
 - `Product Documentation`_
@@ -14,7 +14,7 @@ Python Client for Cloud Video Intelligence API
    :target: https://pypi.org/project/google-cloud-videointelligence/
 .. |versions| image:: https://img.shields.io/pypi/pyversions/google-cloud-videointelligence.svg
    :target: https://pypi.org/project/google-cloud-videointelligence/
-.. _Cloud Video Intelligence API: https://cloud.google.com/video-intelligence/docs/
+.. _Video Intelligence API: https://cloud.google.com/video-intelligence/docs/
 .. _Client Library Documentation: https://cloud.google.com/python/docs/reference/videointelligence/latest
 .. _Product Documentation:  https://cloud.google.com/video-intelligence/docs/
 
@@ -25,12 +25,12 @@ In order to use this library, you first need to go through the following steps:
 
 1. `Select or create a Cloud Platform project.`_
 2. `Enable billing for your project.`_
-3. `Enable the Cloud Video Intelligence API.`_
+3. `Enable the Video Intelligence API.`_
 4. `Setup Authentication.`_
 
 .. _Select or create a Cloud Platform project.: https://console.cloud.google.com/project
 .. _Enable billing for your project.: https://cloud.google.com/billing/docs/how-to/modify-project#enable_billing_for_a_project
-.. _Enable the Cloud Video Intelligence API.:  https://cloud.google.com/video-intelligence/docs/
+.. _Enable the Video Intelligence API.:  https://cloud.google.com/video-intelligence/docs/
 .. _Setup Authentication.: https://googleapis.dev/python/google-api-core/latest/auth.html
 
 Installation
@@ -92,12 +92,12 @@ Windows
 Next Steps
 ~~~~~~~~~~
 
--  Read the `Client Library Documentation`_ for Cloud Video Intelligence API
+-  Read the `Client Library Documentation`_ for Video Intelligence API
    to see other available methods on the client.
--  Read the `Cloud Video Intelligence API Product documentation`_ to learn
+-  Read the `Video Intelligence API Product documentation`_ to learn
    more about the product and see How-to Guides.
 -  View this `README`_ to see the full list of Cloud
    APIs that we cover.
 
-.. _Cloud Video Intelligence API Product documentation:  https://cloud.google.com/video-intelligence/docs/
+.. _Video Intelligence API Product documentation:  https://cloud.google.com/video-intelligence/docs/
 .. _README: https://github.com/googleapis/google-cloud-python/blob/main/README.rst
