@@ -1,6 +1,6 @@
 {
     "name": "videointelligence",
-    "name_pretty": "Cloud Video Intelligence",
+    "name_pretty": "Video Intelligence",
     "product_documentation": "https://cloud.google.com/video-intelligence/docs/",
     "client_documentation": "https://cloud.google.com/python/docs/reference/videointelligence/latest",
     "issue_tracker": "https://issuetracker.google.com/savedsearches/5084810",
