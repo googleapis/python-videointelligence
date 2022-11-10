@@ -21,6 +21,8 @@ from typing import (
     Iterable,
     Iterator,
     Mapping,
+    MutableMapping,
+    MutableSequence,
     Optional,
     Sequence,
     Tuple,
@@ -77,7 +79,7 @@ class StreamingVideoIntelligenceServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[StreamingVideoIntelligenceServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -332,7 +334,9 @@ class StreamingVideoIntelligenceServiceClient(
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, StreamingVideoIntelligenceServiceTransport, None] = None,
+        transport: Optional[
+            Union[str, StreamingVideoIntelligenceServiceTransport]
+        ] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -430,10 +434,12 @@ class StreamingVideoIntelligenceServiceClient(
 
     def streaming_annotate_video(
         self,
-        requests: Iterator[video_intelligence.StreamingAnnotateVideoRequest] = None,
+        requests: Optional[
+            Iterator[video_intelligence.StreamingAnnotateVideoRequest]
+        ] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> Iterable[video_intelligence.StreamingAnnotateVideoResponse]:
         r"""Performs video annotation with bidirectional

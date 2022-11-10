@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -60,7 +71,7 @@ class VideoIntelligenceServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[VideoIntelligenceServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -313,7 +324,7 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, VideoIntelligenceServiceTransport, None] = None,
+        transport: Optional[Union[str, VideoIntelligenceServiceTransport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -411,12 +422,12 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
     def annotate_video(
         self,
-        request: Union[video_intelligence.AnnotateVideoRequest, dict] = None,
+        request: Optional[Union[video_intelligence.AnnotateVideoRequest, dict]] = None,
         *,
-        input_uri: str = None,
-        features: Sequence[video_intelligence.Feature] = None,
+        input_uri: Optional[str] = None,
+        features: Optional[MutableSequence[video_intelligence.Feature]] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Performs asynchronous video annotation. Progress and results can
@@ -442,7 +453,7 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
 
                 # Initialize request argument(s)
                 request = videointelligence_v1p1beta1.AnnotateVideoRequest(
-                    features="SPEECH_TRANSCRIPTION",
+                    features=['SPEECH_TRANSCRIPTION'],
                 )
 
                 # Make the request
@@ -477,7 +488,7 @@ class VideoIntelligenceServiceClient(metaclass=VideoIntelligenceServiceClientMet
                 This corresponds to the ``input_uri`` field
                 on the ``request`` instance; if ``request`` is provided, this
                 should not be set.
-            features (Sequence[google.cloud.videointelligence_v1p1beta1.types.Feature]):
+            features (MutableSequence[google.cloud.videointelligence_v1p1beta1.types.Feature]):
                 Required. Requested video annotation
                 features.
 
