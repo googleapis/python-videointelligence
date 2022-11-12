@@ -7,27 +7,27 @@
         "google/cloud/videointelligence/gapic_version.py",
         {
           "type": "json",
-          "path": "samples/generated_samples/snippet_metadata_videointelligence_v1p3beta1.json",
+          "path": "samples/generated_samples/snippet_metadata_google.cloud.videointelligence.v1p2beta1.json",
           "jsonpath": "$.clientLibrary.version"
         },
         {
           "type": "json",
-          "path": "samples/generated_samples/snippet_metadata_videointelligence_v1beta2.json",
+          "path": "samples/generated_samples/snippet_metadata_google.cloud.videointelligence.v1beta2.json",
           "jsonpath": "$.clientLibrary.version"
         },
         {
           "type": "json",
-          "path": "samples/generated_samples/snippet_metadata_videointelligence_v1p2beta1.json",
+          "path": "samples/generated_samples/snippet_metadata_google.cloud.videointelligence.v1.json",
           "jsonpath": "$.clientLibrary.version"
         },
         {
           "type": "json",
-          "path": "samples/generated_samples/snippet_metadata_videointelligence_v1.json",
+          "path": "samples/generated_samples/snippet_metadata_google.cloud.videointelligence.v1p3beta1.json",
           "jsonpath": "$.clientLibrary.version"
         },
         {
           "type": "json",
-          "path": "samples/generated_samples/snippet_metadata_videointelligence_v1p1beta1.json",
+          "path": "samples/generated_samples/snippet_metadata_google.cloud.videointelligence.v1p1beta1.json",
           "jsonpath": "$.clientLibrary.version"
         }
       ]
