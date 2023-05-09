@@ -39,6 +39,7 @@ import io
 from google.cloud import videointelligence
 # [END video_detect_text]
 
+
 def analyze_explicit_content(path):
     # [START video_analyze_explicit_content]
     """Detects explicit content from the GCS path to a video."""
