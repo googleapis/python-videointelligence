@@ -32,10 +32,12 @@ Usage Examples:
 """
 
 import argparse
+
+# [START video_detect_text]
 import io
 
 from google.cloud import videointelligence
-
+# [END video_detect_text]
 
 def analyze_explicit_content(path):
     # [START video_analyze_explicit_content]
@@ -357,11 +359,10 @@ def video_detect_text_gcs(input_uri):
     # [END video_detect_text_gcs]
 
 
+# [START video_detect_text]
 def video_detect_text(path):
-    # [START video_detect_text]
+    
     """Detect text in a local video."""
-    from google.cloud import videointelligence
-
     video_client = videointelligence.VideoIntelligenceServiceClient()
     features = [videointelligence.Feature.TEXT_DETECTION]
     video_context = videointelligence.VideoContext()
@@ -410,7 +411,7 @@ def video_detect_text(path):
         print("Rotated Bounding Box Vertices:")
         for vertex in frame.rotated_bounding_box.vertices:
             print("\tVertex.x: {}, Vertex.y: {}".format(vertex.x, vertex.y))
-    # [END video_detect_text]
+# [END video_detect_text]
 
 
 def track_objects_gcs(gcs_uri):
