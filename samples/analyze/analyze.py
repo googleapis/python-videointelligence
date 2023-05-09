@@ -361,7 +361,7 @@ def video_detect_text_gcs(input_uri):
 
 # [START video_detect_text]
 def video_detect_text(path):
-    
+
     """Detect text in a local video."""
     video_client = videointelligence.VideoIntelligenceServiceClient()
     features = [videointelligence.Feature.TEXT_DETECTION]
